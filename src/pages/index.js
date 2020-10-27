@@ -132,8 +132,9 @@ const WhatSetsUsApartStyles = styled.div`
       color: var(--altColour);
       padding: 3rem 0;
       h2 {
-        text-decoration: underline 3px var(--mainColour);
         font-size: clamp(1.6rem, 50%, 2rem);
+        text-decoration: underline 3px var(--mainColour);
+        -webkit-text-decoration: underline 3px var(--mainColour);
       }
       p {
         margin-top: 1rem;
