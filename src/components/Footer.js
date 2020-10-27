@@ -87,6 +87,7 @@ const FooterStyles = styled.footer`
       &__right {
         display: flex;
         width: 30%;
+        height: 100%;
         justify-content: space-between;
         svg {
           width: 15px;

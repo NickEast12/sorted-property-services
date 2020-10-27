@@ -47,10 +47,11 @@ const GlobalStyles = createGlobalStyle`
     button {
         background: var(--mainColour);
         border: var(--mainColour);
-        padding: .5rem 1rem; 
+        padding: .75rem 1rem; 
         border-radius: 3.5px;
         color: var(--altColour);
         cursor: pointer;
+        
     }
     input:focus { outline: none; }
 

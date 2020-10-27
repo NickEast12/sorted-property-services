@@ -3,26 +3,28 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 
 const CardStyles = styled.div`
-  background: var(--altBackground);
-  color: var(--altColour);
-  border: solid 4px var(--mainColour);
-  padding: 2rem 1.5rem;
-  margin-right: 1rem;
+  @media only screen and (min-width: 100px) {
+    background: var(--altBackground);
+    color: var(--altColour);
+    border: solid 4px var(--mainColour);
+    padding: 2rem 1.5rem;
+    margin-right: 1rem;
 
-  p {
-    font-style: italic;
-    font-weight: 600;
-    font-size: 0.9rem;
-  }
-  h4 {
-    color: var(--black);
-    font-size: 1.2rem;
-    margin: 1rem 0 0.5rem 0;
-  }
-  h5 {
-    color: var(--mainColour);
-    font-weight: 600;
-    font-size: 1.1rem;
+    p {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    h4 {
+      color: var(--black);
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem 0;
+    }
+    h5 {
+      color: var(--mainColour);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
   }
 `;
 

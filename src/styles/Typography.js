@@ -17,6 +17,7 @@ const Typography = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
+        font-display: auto;
     }
     h1,h2,h3,h4,h5,h6,p, li {
         margin: 0;

@@ -4,35 +4,40 @@ import styled from 'styled-components';
 import Image from './Image';
 
 const ServicesCardStyles = styled.div`
-  padding: 0.75rem 0;
-  .services__img {
-    width: 100%;
+  @media only screen and (min-width: 100px) {
+    padding: 0.75rem 0;
+    .services__img {
+      width: 100%;
 
-    margin: 0 auto -2rem auto;
-    .gatsby-image-wrapper {
-      width: 50%;
-      margin: 0 auto;
+      margin: 0 auto -2rem auto;
+      .gatsby-image-wrapper {
+        width: 50%;
+        margin: 0 auto;
+      }
     }
-  }
-  .services__content {
-    background: var(--altColour);
-    text-align: center;
-    padding: 2.5rem 0;
-    &__wrapper {
-      width: 90%;
-      margin: 0 auto;
-      h2 {
-        font-size: clamp(1.6rem, 50%, 2rem);
-      }
-      p {
-        margin: 0.75rem 0;
-      }
-      a {
-        button {
-          margin-top: 1rem;
+    .services__content {
+      background: var(--altColour);
+      text-align: center;
+      padding: 2.5rem 0;
+      &__wrapper {
+        width: 90%;
+        margin: 0 auto;
+        h2 {
+          font-size: clamp(1.6rem, 50%, 2rem);
+        }
+        p {
+          margin: 0.75rem 0;
+        }
+        a {
+          button {
+            margin-top: 1rem;
+          }
         }
       }
     }
+  }
+  @media only screen and (min-width: 375px) {
+    padding: 1rem 0;
   }
 `;
 

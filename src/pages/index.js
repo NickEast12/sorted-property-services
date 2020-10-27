@@ -9,10 +9,16 @@ import ServicesCard from '../components/ServicesCard';
 import Icon from '../svgs/instagram.svg';
 
 const BodyStyles = styled.div`
-  width: 100%;
-  height: 100%;
-  background: var(--altBackground);
-  .cards__wrapper {
+  @media only screen and (min-width: 100px) {
+    width: 100%;
+    height: 100%;
+    background: var(--altBackground);
+    .cards__wrapper {
+    }
+  }
+  @media only screen and (min-width: 375px) {
+    .cards__wrapper {
+    }
   }
 `;
 
@@ -80,6 +86,7 @@ const MainHeaderStyles = styled.div`
         button {
           background: var(--altColour);
           color: var(--white);
+          width: 60%;
         }
       }
     }
@@ -105,7 +112,7 @@ const MainHeader = () => {
           </h1>
         </div>
         <div className="title__img">
-          <Image alt="Property Services" filename="background.png" />
+          <Image alt="Property Services" filename="background2.png" />
         </div>
         <div className="title__btn">
           <Link to="/">
@@ -117,41 +124,51 @@ const MainHeader = () => {
   );
 };
 const WhatSetsUsApartStyles = styled.div`
-  .why-us {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--altColour);
-    padding: 3rem 0;
-    h2 {
-      text-decoration: underline 3px var(--mainColour);
-      font-size: clamp(1.6rem, 50%, 2rem);
-    }
-    p {
-      margin-top: 1rem;
-    }
-    ul {
-      list-style: none;
+  @media only screen and (min-width: 100px) {
+    .why-us {
       width: 90%;
-      margin: 1rem auto;
-      padding: 1rem 0;
-      display: grid;
+      margin: 0 auto;
       text-align: center;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-
-      justify-content: space-between;
-      li {
-        flex-grow: 2;
-        align-items: center;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
+      color: var(--altColour);
+      padding: 3rem 0;
+      h2 {
+        text-decoration: underline 3px var(--mainColour);
+        font-size: clamp(1.6rem, 50%, 2rem);
+      }
+      p {
+        margin-top: 1rem;
+      }
+      ul {
+        list-style: none;
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1rem 0;
+        display: grid;
         text-align: center;
-        svg {
-          width: 50px;
-          margin-bottom: 10px;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        justify-content: space-between;
+        li {
+          flex-grow: 2;
+          align-items: center;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          svg {
+            width: 50px;
+            margin-bottom: 10px;
+          }
         }
+      }
+    }
+  }
+  @media only screen and (min-width: 375px) {
+    .why-us {
+      padding: 3.5rem 0;
+      ul {
+        width: 60%;
       }
     }
   }
@@ -186,23 +203,31 @@ const WhatSetsUsApart = () => (
 );
 
 const ClientsStyles = styled.div`
-  width: 100%;
-  background: var(--altColour);
-  .clients__wrapper {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 3rem 0;
-    h3 {
-      font-size: clamp(1.5rem, 50%, 1.9rem);
+  @media only screen and (min-width: 100px) {
+    width: 100%;
+    background: var(--altColour);
+    .clients__wrapper {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 3rem 0;
+      h3 {
+        font-size: clamp(1.5rem, 50%, 1.9rem);
+      }
+      & > p {
+        margin-top: 0.75rem;
+        font-size: clamp(1rem, 50%, 1.4rem);
+      }
+      &__cards {
+        width: 80%;
+        margin: 1.5rem auto 0 auto;
+      }
     }
-    & > p {
-      margin-top: 0.75rem;
-      font-size: clamp(1rem, 50%, 1.4rem);
-    }
-    &__cards {
+  }
+  @media only screen and (min-width: 375px) {
+    .clients__wrapper {
+      padding: 3.5rem 0;
       width: 80%;
-      margin: 1.5rem auto 0 auto;
     }
   }
 `;
