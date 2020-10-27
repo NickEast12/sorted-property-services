@@ -18,7 +18,7 @@ const FooterStyles = styled.footer`
     padding-top: 1.5rem;
     &__links,
     &__social {
-      padding: 1rem 0;
+      padding: 0.5rem 0 0 0;
       h4 {
         font-weight: 700;
         text-decoration: underline 2px var(--mainColour);
@@ -77,6 +77,7 @@ const FooterStyles = styled.footer`
       width: 90%;
       margin: 0 auto;
       display: flex;
+      justify-content: space-between;
       &__left {
         width: auto;
         p {
@@ -88,7 +89,7 @@ const FooterStyles = styled.footer`
         width: 30%;
         justify-content: space-between;
         svg {
-          width: 17px;
+          width: 15px;
           fill: var(--altColour);
         }
       }

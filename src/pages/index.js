@@ -28,19 +28,19 @@ const index = () => {
             img="electrical.png"
             title="Electrical"
             text="Fully qualified and experienced electrical engineers will solve all your electrical needs – from a faulty light switch and smoke alarm installation to a complete rewire and a full EICR."
-            link="/electrical"
+            link="/what-we-do/#electrical"
           />
           <ServicesCard
             img="gas.png"
             title="Gas &amp; Plumbing"
             text="Gas-safe registered engineers and installers can assist with any heating or boiler-related problems – whether it’s a complete central heating replacement or a new boiler installation. "
-            link="/gas-plumbing"
+            link="/what-we-do/#gasandplumbing"
           />
           <ServicesCard
             img="trade.png"
             title="Multi-trade"
             text="From plastering and tiling to hanging wallpaper and garden maintenance, there isn’t a job that our multi-trade team can’t put their experienced hands to."
-            link="/multi-trade"
+            link="/what-we-do/#multi-trade"
           />
         </div>
         <WhatSetsUsApart />
@@ -61,7 +61,7 @@ const MainHeaderStyles = styled.div`
     margin: 0 auto;
     text-align: center;
     &__content {
-      padding: 1.5rem 0;
+      padding: 1rem 0;
       span {
         color: var(--altColour);
       }
@@ -75,7 +75,7 @@ const MainHeaderStyles = styled.div`
       }
     }
     &__btn {
-      margin-top: 2rem;
+      margin-top: 0.85rem;
       button {
         background: var(--altColour);
         color: var(--white);
@@ -238,11 +238,16 @@ const Accreditations = () => (
     <div className="acc__content">
       <h4>Our Accreditations</h4>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolores
-        neque quas delectus provident saepe aliquam! Facere consectetur suscipit
-        nihil debitis libero ullam ipsam reprehenderit, at accusamus culpa! Ad,
-        sed.
+        At Sorted, we understand the complexities involved in navigating
+        ever-changing legislation, but we’re experts at helping landlords and
+        property managers stay compliant with certification.
       </p>
+      <p>
+        For your professional piece of mind, we conduct Gas Safety Certificates,
+        Electrical Inspection Condition Reports, PAT tests, Energy Performance
+        Certificates, Legionella Risk Assessments and HMO licences.
+      </p>
+
       <div className="acc__content__img">
         <Image alt="Property Services" filename="quidos.png" />
         <Image alt="Property Services" filename="gassafe.jpg" />

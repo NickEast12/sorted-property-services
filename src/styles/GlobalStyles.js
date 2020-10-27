@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
         --black: #000;
         --white: #fff;
         --mainFont: Inter;
-        --altFont: NexaLight;
+        /* --altFont: NexaLight; */
         --m: 0 auto;
         --testing: dotted 1px red;
     }
@@ -50,7 +50,9 @@ const GlobalStyles = createGlobalStyle`
         padding: .5rem 1rem; 
         border-radius: 3.5px;
         color: var(--altColour);
+        cursor: pointer;
     }
+    input:focus { outline: none; }
 
 `;
 

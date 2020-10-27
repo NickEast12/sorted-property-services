@@ -8,12 +8,17 @@ const CovidUpdateStyles = styled.section`
   width: 100%;
   background: var(--mainColour);
   div {
-    padding: 1rem 0;
-    width: 80%;
+    padding: 0.5rem 0;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
     p {
+      font-size: 0.75rem;
+
       color: var(--black);
+      span {
+        font-weight: 600;
+      }
     }
   }
 `;
@@ -134,13 +139,19 @@ const Nav = () => {
     <>
       <CovidUpdateStyles>
         <div>
-          <p>Covid Guidance</p>
+          <p>
+            <span>COVID-19 Update: </span>
+            We’ve briefed and equipped our tradespeople in response to the
+            coronavirus crisis. Read our policy.
+          </p>
         </div>
       </CovidUpdateStyles>
       <NavStyles open={open}>
         <div className="mobile-nav-wrapper">
           <div className="mobile-logo">
-            <img src={Logo} alt="Sorted Logo" />
+            <Link to="/">
+              <img src={Logo} alt="Sorted Logo" />
+            </Link>
           </div>
           <div
             className="hamburger"
@@ -157,16 +168,16 @@ const Nav = () => {
         <MobileNavStyles open={open}>
           <div>
             <ul>
-              <Link to="/">
+              <Link to="/why-sorted">
                 <li>Why Sorted</li>
               </Link>
-              <Link to="/">
+              <Link to="/what-we-do">
                 <li>What we do</li>
               </Link>
               <a href="/">
                 <li>0203 962 5050 </li>
               </a>
-              <Link to="/">
+              <Link to="/contact">
                 <li>
                   <button type="button">Contact Us</button>
                 </li>
