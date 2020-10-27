@@ -227,7 +227,7 @@ const MyMapStyles = [
 
 const MapStyles = styled.div`
   width: 100%;
-  height: 15rem;
+  height: 17rem;
   position: relative;
 `;
 

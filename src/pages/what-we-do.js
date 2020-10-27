@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Bread from '../components/Breadcrums';
 import CTA from '../components/CTA';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
@@ -69,10 +70,11 @@ const WWDStyles = styled.div`
   }
 `;
 
-const WhatWeDoPage = () => {
+const WhatWeDoPage = ({ pageContext }) => {
   console.log('what we do');
   return (
     <Layout>
+      <Bread breaddata={pageContext.breadcrumb} />
       <WWDStyles>
         <PageHeader title="What we do" />
         <div className="wwd__content">

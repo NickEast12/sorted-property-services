@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import CTA from '../components/CTA';
+import Bread from '../components/Breadcrums';
 
 const WhySortedStyles = styled.div`
   width: 100%;
@@ -56,10 +57,11 @@ const WhySortedStyles = styled.div`
   }
 `;
 
-const WhySortedPage = () => {
+const WhySortedPage = ({ pageContext }) => {
   console.log('hello');
   return (
     <Layout>
+      <Bread breaddata={pageContext.breadcrumb} />
       <WhySortedStyles>
         <PageHeader title="Why Sorted?" />
         <div className="why__wrapper">

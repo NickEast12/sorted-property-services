@@ -5,6 +5,7 @@ import Maps from '../components/Map';
 import Address from '../svgs/pin.svg';
 import Phone from '../svgs/phone.svg';
 import Email from '../svgs/email.svg';
+import Bread from '../components/Breadcrums';
 
 const ContactStyles = styled.div`
   width: 100%;
@@ -121,8 +122,9 @@ const ContactStyles = styled.div`
   }
 `;
 
-const contact = () => (
+const contact = ({ pageContext }) => (
   <Layout>
+    <Bread breaddata={pageContext.breadcrumb} />
     <ContactStyles>
       <div className="contact__map">
         <Maps />

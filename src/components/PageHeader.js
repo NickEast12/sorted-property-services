@@ -5,7 +5,7 @@ import Image from './Image';
 const PageHeaderStyles = styled.div`
   width: 100%;
   background: var(--mainColour);
-  padding: 2rem 0;
+  padding: 3rem 0;
   .header__content {
     text-align: center;
     padding: 0.25rem 0;
