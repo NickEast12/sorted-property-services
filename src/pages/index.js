@@ -52,33 +52,44 @@ const index = () => {
 };
 
 const MainHeaderStyles = styled.div`
-  width: 100%;
-  height: 78vh;
-  position: relative;
-  background: var(--mainColour);
-  .title {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    &__content {
-      padding: 1rem 0;
-      span {
-        color: var(--altColour);
+  @media only screen and (min-width: 100px) {
+    width: 100%;
+    height: 78vh;
+    position: relative;
+    background: var(--mainColour);
+    .title {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      &__content {
+        padding: 1rem 0;
+        span {
+          color: var(--altColour);
+        }
+      }
+      &__img {
+        .gatsby-image-wrapper {
+          width: 100%;
+          object-fit: center !important;
+          position: absolute;
+          top: 0;
+        }
+      }
+      &__btn {
+        margin-top: 0.85rem;
+        button {
+          background: var(--altColour);
+          color: var(--white);
+        }
       }
     }
-    &__img {
-      .gatsby-image-wrapper {
-        width: 100%;
-        object-fit: center !important;
-        position: absolute;
-        top: 0;
-      }
-    }
-    &__btn {
-      margin-top: 0.85rem;
-      button {
-        background: var(--altColour);
-        color: var(--white);
+  }
+  @media only screen and (min-width: 375px) {
+    height: 82vh;
+    .title {
+      padding-top: 3rem;
+      &__btn {
+        margin-top: 2rem;
       }
     }
   }
