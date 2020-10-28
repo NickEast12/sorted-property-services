@@ -26,6 +26,11 @@ const CardStyles = styled.div`
       font-size: 1.1rem;
     }
   }
+  @media only screen and (min-width: 414px) {
+    p {
+      font-size: 1rem;
+    }
+  }
 `;
 
 const ClientCards = () => {

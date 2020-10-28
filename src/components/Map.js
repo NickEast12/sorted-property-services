@@ -234,6 +234,9 @@ const MapStyles = styled.div`
   @media only screen and (min-width: 375px) {
     height: 20rem;
   }
+  @media only screen and (min-width: 414px) {
+    height: 25rem;
+  }
 `;
 
 export class Maps extends Component {

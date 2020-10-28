@@ -39,11 +39,11 @@ const GlobalStyles = createGlobalStyle`
     }
     a[aria-current="page"] {
         color: var(--mainColour);
-    }
+    };
     .gatsby-image-wrapper img[src*=base64\\,] {
     image-rendering: -moz-crisp-edges;
     image-rendering: pixelated;
-    }
+    };
     button {
         background: var(--mainColour);
         border: var(--mainColour);
@@ -53,7 +53,32 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
         
     }
-    input:focus { outline: none; }
+    input:focus { outline: none; };
+
+    .underline-white {
+        text-shadow: -2px -2px white, -2px 2px white, 2px -2px white,
+          2px 2px white;
+        background-size: 1px 1em;
+        box-shadow: inset 0 0em var(--mainColour),
+          inset 0 -3px var(--mainColour);
+        display: inline;
+    };
+    .underline-alt {
+        text-shadow: -2px -2px var(--altBackground), -2px 2px var(--altBackground), 2px -2px var(--altBackground),
+          2px 2px var(--altBackground);
+        background-size: 1px 1em;
+        box-shadow: inset 0 0em var(--mainColour),
+          inset 0 -3px var(--mainColour);
+        display: inline;
+    };
+    .underline-background {
+        text-shadow: -2px -2px var(--altColour), -2px 2px var(--altColour), 2px -2px var(--altColour),
+          2px 2px var(--altColour);
+        background-size: 1px 1em;
+        box-shadow: inset 0 0em var(--mainColour),
+          inset 0 -3px var(--mainColour);
+        display: inline;
+    };
 
 `;
 

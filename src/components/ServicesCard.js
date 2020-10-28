@@ -39,6 +39,13 @@ const ServicesCardStyles = styled.div`
   @media only screen and (min-width: 375px) {
     padding: 1rem 0;
   }
+  @media only screen and (min-width: 414px) {
+    .services__content {
+      &__wrapper {
+        width: 80%;
+      }
+    }
+  }
 `;
 
 const ServicesCard = ({ img, title, text, link }) => (

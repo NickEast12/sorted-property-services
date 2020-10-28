@@ -26,12 +26,6 @@ const PageServicesStyles = styled.div`
       h3 {
         color: var(--altColour);
         font-size: 1.4rem;
-        text-shadow: -2px -2px white, -2px 2px white, 2px -2px white,
-          2px 2px white;
-        background-size: 1px 1em;
-        box-shadow: inset 0 0em var(--mainColour),
-          inset 0 -3px var(--mainColour);
-        display: inline;
       }
       h5 {
         color: var(--altColour);
@@ -64,7 +58,7 @@ const PageServices = ({ id, imgAlt, img, title, intro, list }) => {
         <Image alt={imgAlt} filename={img} />
       </div>
       <div className="ps-content">
-        <h3>{title}</h3>
+        <h3 className="underline-white">{title}</h3>
         <h5>{intro}</h5>
         <ul>
           {list.map((items) => (

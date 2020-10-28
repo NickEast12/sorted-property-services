@@ -144,12 +144,6 @@ const WhatSetsUsApartStyles = styled.div`
       padding: 3rem 0;
       h2 {
         font-size: clamp(1.6rem, 50%, 2rem);
-        text-shadow: -2px -2px white, -2px 2px white, 2px -2px white,
-          2px 2px white;
-        background-size: 1px 1em;
-        box-shadow: inset 0 0em var(--mainColour),
-          inset 0 -3px var(--mainColour);
-        display: inline;
       }
       p {
         margin-top: 1rem;
@@ -188,12 +182,18 @@ const WhatSetsUsApartStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 414px) {
+    .why-us {
+      padding: 4rem 0;
+      width: 80%;
+    }
+  }
 `;
 const WhatSetsUsApart = () => (
   <WhatSetsUsApartStyles>
     <div className="why-us">
       <div className="whu-us__wrapper">
-        <h2>What sets us apart</h2>
+        <h2 className="underline-alt">What sets us apart</h2>
         <p>
           No other maintenance company has been built by property managers for
           property managers. And with over 30 years of combined property
@@ -246,11 +246,17 @@ const ClientsStyles = styled.div`
       width: 80%;
     }
   }
+  @media only screen and (min-width: 414px) {
+    .clients__wrapper {
+      width: 80%;
+      padding: 4rem 0;
+    }
+  }
 `;
 const Clients = () => (
   <ClientsStyles>
     <div className="clients__wrapper">
-      <h3>Don't just take our work for it</h3>
+      <h3>Don't just take our word for it</h3>
       <p>What our clients have to say</p>
       <div className="clients__wrapper__cards">
         <ClientCards />
@@ -260,39 +266,42 @@ const Clients = () => (
 );
 
 const AccreditationsStyles = styled.div`
-  background: var(--altBackground);
-  .acc__content {
-    padding: 3rem 0;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--altColour);
+  @media only screen and (min-width: 100px) {
+    background: var(--altBackground);
+    .acc__content {
+      padding: 3rem 0;
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--altColour);
 
-    h4 {
-      font-size: clamp(1.6rem, 50%, 2rem);
-      text-shadow: -2px -2px white, -2px 2px white, 2px -2px white,
-        2px 2px white;
-      background-size: 1px 1em;
-      box-shadow: inset 0 0em var(--mainColour), inset 0 -3px var(--mainColour);
-      display: inline;
-    }
-    p {
-      margin: 1rem 0;
-    }
-    &__img {
-      width: 80%;
-      margin: 2rem auto 0 auto;
-      .gatsby-image-wrapper {
-        width: 135px;
-        margin: 1rem auto;
+      h4 {
+        font-size: clamp(1.6rem, 50%, 2rem);
       }
+      p {
+        margin: 1rem 0;
+      }
+      &__img {
+        width: 80%;
+        margin: 2rem auto 0 auto;
+        .gatsby-image-wrapper {
+          width: 135px;
+          margin: 1rem auto;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 414px) {
+    .acc__content {
+      width: 80%;
     }
   }
 `;
 const Accreditations = () => (
   <AccreditationsStyles>
     <div className="acc__content">
-      <h4>Our Accreditations</h4>
+      <h4 className="underline-alt">Our Accreditations</h4>
       <p>
         At Sorted, we understand the complexities involved in navigating
         ever-changing legislation, but we’re experts at helping landlords and

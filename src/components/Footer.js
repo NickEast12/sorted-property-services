@@ -24,12 +24,6 @@ const FooterStyles = styled.footer`
           font-weight: 700;
           width: 40%;
           font-size: clamp(1.1rem, 50%, 1.4rem);
-          text-shadow: -2px -2px var(--altColour), -2px 2px var(--altColour),
-            2px -2px var(--altColour), 2px 2px var(--altColour);
-          background-size: 1px 1em;
-          box-shadow: inset 0 0em var(--mainColour),
-            inset 0 -3px var(--mainColour);
-          display: inline;
         }
         ul {
           list-style: none;
@@ -119,7 +113,7 @@ const Footer = () => {
     <FooterStyles>
       <div className="footer">
         <div className="footer__links">
-          <h4>Quick Links</h4>
+          <h4 className="underline-background">Quick Links</h4>
           <ul>
             <Link to="/why-sorted">
               <li>Why Sorted</li>
@@ -133,7 +127,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer__social">
-          <h4>Contact</h4>
+          <h4 className="underline-background">Contact</h4>
           <ul>
             <Link to="/">
               <li>

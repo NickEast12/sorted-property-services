@@ -8,116 +8,136 @@ import Email from '../svgs/email.svg';
 import Bread from '../components/Breadcrums';
 
 const ContactStyles = styled.div`
-  width: 100%;
-  .contact__map {
-  }
-  .contact__body {
-    background: var(--altBackground);
-    padding: 3rem 0;
-    &__left {
-      width: 90%;
-      margin: 0 auto;
-      text-align: center;
-      h1 {
-        color: var(--altColour);
-        text-decoration: underline 3px var(--mainColour);
-      }
-      p {
-        margin-top: 0.75rem;
-        color: var(--black);
-      }
-      ul {
-        padding: 0;
-        margin: 2rem 0;
-        list-style: none;
-        .mob {
-          display: none;
+  @media only screen and (min-width: 414px) {
+    width: 100%;
+    .contact__map {
+    }
+    .contact__body {
+      background: var(--altBackground);
+      padding: 3rem 0;
+      &__left {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        h1 {
+          color: var(--altColour);
+          text-decoration: underline 3px var(--mainColour);
         }
-        li {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          align-self: center;
-          align-content: center;
-          margin: 1.5rem 0;
+        p {
+          margin-top: 0.75rem;
           color: var(--black);
-          font-size: 1rem;
-          a {
-            text-decoration: none;
+        }
+        ul {
+          padding: 0;
+          margin: 2rem 0;
+          list-style: none;
+          .mob {
+            display: none;
           }
-          svg {
-            width: 25px;
-            margin-bottom: 10px;
-            fill: var(--altColour);
+          li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: center;
+            align-content: center;
+            margin: 1.5rem 0;
+            color: var(--black);
+            font-size: 1rem;
+            a {
+              text-decoration: none;
+            }
+            svg {
+              width: 25px;
+              margin-bottom: 10px;
+              fill: var(--altColour);
+            }
+          }
+        }
+      }
+      .form__wrapper {
+        padding: 2rem 0;
+        width: 90%;
+        margin: 0 auto;
+
+        h2 {
+          color: var(--altColour);
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+        form {
+          width: 90%;
+          margin: 0 auto;
+          fieldset {
+            padding: 0;
+            margin: 0;
+            border: none;
+            .form-input {
+              width: 100%;
+              margin: 1.5rem 0;
+              border-radius: 4px;
+              label {
+                color: var(--black);
+
+                & > span {
+                  color: red;
+                }
+                & input {
+                  width: 100%;
+                  margin: 0.5rem 0;
+                  padding: 0.25rem 0;
+                  background: var(--altBackground);
+                  border: none;
+                  border-radius: 0 !important;
+                  border-bottom: solid 2px var(--altColour);
+                  & > input:focus {
+                    outline: none;
+                  }
+                }
+              }
+            }
+            .form-textarea {
+              label {
+                color: var(--black);
+
+                & > span {
+                  color: red;
+                }
+                textarea {
+                  background: var(--altColour);
+                  color: var(--altBackground);
+                  width: 100%;
+                  margin-top: 0.85rem;
+                  border: solid 1px var(--altBackgroud);
+                  border-radius: 4px;
+                  padding: 0.75rem 0.5rem;
+                  resize: none;
+                  height: 10rem;
+                }
+              }
+            }
+            .form-btn {
+              margin-top: 1rem;
+            }
           }
         }
       }
     }
-    .form__wrapper {
-      padding: 2rem 0;
-      width: 90%;
-      margin: 0 auto;
-
-      h2 {
-        color: var(--altColour);
-        text-align: center;
-        margin-bottom: 1rem;
-      }
-      form {
-        width: 90%;
-        margin: 0 auto;
-        fieldset {
-          padding: 0;
-          margin: 0;
-          border: none;
-          .form-input {
-            width: 100%;
-            margin: 1.5rem 0;
-            border-radius: 4px;
-            label {
-              color: var(--black);
-
-              & > span {
-                color: red;
-              }
-              & input {
-                width: 100%;
-                margin: 0.5rem 0;
-                padding: 0.25rem 0;
-                background: var(--altBackground);
-                border: none;
-                border-radius: 0 !important;
-                border-bottom: solid 2px var(--altColour);
-                & > input:focus {
-                  outline: none;
-                }
-              }
-            }
+  }
+  @media only screen and (min-width: 414px) {
+    .contact__body {
+      &__left {
+        width: 80%;
+        ul {
+          .mob {
+            display: flex;
           }
-          .form-textarea {
-            label {
-              color: var(--black);
-
-              & > span {
-                color: red;
-              }
-              textarea {
-                background: var(--altColour);
-                color: var(--altBackground);
-                width: 100%;
-                margin-top: 0.85rem;
-                border: solid 1px var(--altBackgroud);
-                border-radius: 4px;
-                padding: 0.75rem 0.5rem;
-                resize: none;
-                height: 10rem;
-              }
-            }
-          }
-          .form-btn {
-            margin-top: 1rem;
+          .desk {
+            display: none;
           }
         }
+      }
+      .form__wrapper {
+        width: 80%;
       }
     }
   }
@@ -156,7 +176,7 @@ const contact = ({ pageContext }) => (
               </span>
               workorders@sortedpropertyservices.co.uk
             </li>
-            <li>
+            <li className="desk">
               <span>
                 <Email />
               </span>
