@@ -115,7 +115,7 @@ const MainHeader = () => {
           <Image alt="Property Services" filename="background2.png" />
         </div>
         <div className="title__btn">
-          <Link to="/">
+          <Link to="/why-sorted">
             <button type="button">Find out more</button>
           </Link>
         </div>

@@ -11,89 +11,99 @@ import Twitter from '../svgs/twitter.svg';
 import Instagram from '../svgs/instagram.svg';
 
 const FooterStyles = styled.footer`
-  width: 100%;
-  .footer {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 1.5rem;
-    &__links,
-    &__social {
-      padding: 0.5rem 0 0 0;
-      h4 {
-        font-weight: 700;
-        text-decoration: underline 2px var(--mainColour);
-        width: 40%;
-        font-size: clamp(1.1rem, 50%, 1.4rem);
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        padding: 1rem 0;
-        a {
-          text-decoration: none;
+  @media only screen and (min-width: 100px) {
+    width: 100%;
+    .footer {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      &__links,
+      &__social {
+        padding: 0.5rem 0 0 0;
+        h4 {
+          font-weight: 700;
+          text-decoration: underline 2px var(--mainColour);
+          width: 40%;
           font-size: clamp(1.1rem, 50%, 1.4rem);
-          li {
-            padding: 0.5rem 0;
-            color: var(--white);
-          }
         }
-      }
-    }
-    &__social {
-      ul a {
-        li {
-          display: flex;
-          align-items: center;
-          align-self: center;
-          align-content: center;
-          span {
-            margin-right: 5px;
-            svg {
-              width: 20px;
-              fill: var(--mainColour);
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          padding: 1rem 0;
+          a {
+            text-decoration: none;
+            font-size: clamp(1rem, 50%, 1.4rem);
+            li {
+              padding: 0.5rem 0;
+              color: var(--white);
             }
           }
         }
       }
-    }
-    &__logo {
-      width: 80%;
-      margin: 0 auto;
-      text-align: center;
-      padding: 1rem 0 2rem 0;
-      img {
-        width: 70%;
+      &__social {
+        ul a {
+          li {
+            display: flex;
+            align-items: center;
+            align-self: center;
+            align-content: center;
+            font-size: 0.85rem;
+            span {
+              margin-right: 5px;
+              width: 5%;
+
+              svg {
+                width: 18px;
+                fill: var(--mainColour);
+              }
+            }
+          }
+        }
+      }
+      &__logo {
+        width: 80%;
+        margin: 0 auto;
         text-align: center;
+        padding: 1rem 0 2rem 0;
+
+        img {
+          width: 140px;
+          text-align: center;
+        }
+      }
+    }
+    .legal {
+      width: 100%;
+      background: var(--mainColour);
+      color: var(--altColour);
+      padding: 0.75rem 0;
+      &__wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        &__left {
+          width: auto;
+          p {
+            font-size: 0.8rem;
+          }
+        }
+        &__right {
+          display: flex;
+          width: 30%;
+          height: 100%;
+          justify-content: space-between;
+          svg {
+            width: 15px;
+            fill: var(--altColour);
+          }
+        }
       }
     }
   }
-  .legal {
-    width: 100%;
-    background: var(--mainColour);
-    color: var(--altColour);
-    padding: 0.75rem 0;
-    &__wrapper {
-      width: 90%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      &__left {
-        width: auto;
-        p {
-          font-size: 0.8rem;
-        }
-      }
-      &__right {
-        display: flex;
-        width: 30%;
-        height: 100%;
-        justify-content: space-between;
-        svg {
-          width: 15px;
-          fill: var(--altColour);
-        }
-      }
+  @media only screen and (min-width: 375px) {
+    .footer {
     }
   }
 `;
@@ -106,14 +116,14 @@ const Footer = () => {
         <div className="footer__links">
           <h4>Quick Links</h4>
           <ul>
-            <Link to="/">
-              <li>Link 1</li>
+            <Link to="/why-sorted">
+              <li>Why Sorted</li>
             </Link>
-            <Link to="/">
-              <li>Link 1</li>
+            <Link to="/what-we-do">
+              <li>What we do</li>
             </Link>
-            <Link to="/">
-              <li>Link 1</li>
+            <Link to="/contact">
+              <li>Contact</li>
             </Link>
           </ul>
         </div>
@@ -125,7 +135,7 @@ const Footer = () => {
                 <span>
                   <Email />
                 </span>
-                - email
+                - workorders@sortedpropertyservices.co.uk
               </li>
             </Link>
             <Link to="/">
@@ -133,7 +143,7 @@ const Footer = () => {
                 <span>
                   <Phone />
                 </span>
-                - Phone
+                - 020 3962 5050
               </li>
             </Link>
             <Link to="/">
@@ -141,7 +151,7 @@ const Footer = () => {
                 <span>
                   <Address />
                 </span>
-                - Address
+                - Unit 1 Ensign House, Rope Street, London SE16 7EX
               </li>
             </Link>
           </ul>

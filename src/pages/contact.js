@@ -86,6 +86,7 @@ const ContactStyles = styled.div`
                 padding: 0.25rem 0;
                 background: var(--altBackground);
                 border: none;
+                border-radius: 0 !important;
                 border-bottom: solid 2px var(--altColour);
                 & > input:focus {
                   outline: none;
