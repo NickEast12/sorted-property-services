@@ -31,7 +31,7 @@ const PageHeader = ({ title }) => {
         <h1>{title}</h1>
       </div>
       <div className="header__img">
-        <Image alt="Property Services" filename="background.png" />
+        <Image alt="Property Services" filename="background2.png" />
       </div>
     </PageHeaderStyles>
   );

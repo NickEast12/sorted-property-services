@@ -100,6 +100,17 @@ const MainHeaderStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 414px) {
+    .title {
+      padding-top: 3rem;
+      &__content {
+        h1 {
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
 `;
 const MainHeader = () => {
   console.log('heder');
