@@ -226,9 +226,14 @@ const MyMapStyles = [
 ];
 
 const MapStyles = styled.div`
-  width: 100%;
-  height: 17rem;
-  position: relative;
+  @media only screen and (min-width: 100px) {
+    width: 100%;
+    height: 17rem;
+    position: relative;
+  }
+  @media only screen and (min-width: 375px) {
+    height: 20rem;
+  }
 `;
 
 export class Maps extends Component {

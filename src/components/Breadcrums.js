@@ -31,7 +31,6 @@ const Bready = styled.div`
 
 const Bread = ({ breaddata }) => {
   const elementsNew = [];
-
   breaddata.crumbs.forEach(createdBread);
   function createdBread(item) {
     const newlast = item.crumbLabel.replace(/-/g, ' ');
@@ -43,7 +42,7 @@ const Bread = ({ breaddata }) => {
     <>
       <Bready>
         <div className="breadcrumb">
-          <ul c>
+          <ul>
             {elementsNew.map((value, index) => (
               <li key={index} className="breadcrumb__wrapper__inner">
                 <Link key={index} to={`${value.pathname}`}>

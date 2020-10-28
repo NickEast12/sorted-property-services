@@ -6,7 +6,7 @@ import Image from '../components/Image';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ServicesCard from '../components/ServicesCard';
-import Icon from '../svgs/instagram.svg';
+import Icon from '../svgs/email.svg';
 
 const BodyStyles = styled.div`
   @media only screen and (min-width: 100px) {
