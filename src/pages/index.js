@@ -102,7 +102,7 @@ const MainHeaderStyles = styled.div`
   }
   @media only screen and (min-width: 414px) {
     .title {
-      padding-top: 3rem;
+      padding-top: 2rem;
       &__content {
         h1 {
           font-size: 2.5rem;
@@ -144,11 +144,12 @@ const WhatSetsUsApartStyles = styled.div`
       padding: 3rem 0;
       h2 {
         font-size: clamp(1.6rem, 50%, 2rem);
-        text-decoration: underline 3px var(--mainColour);
-        text-decoration-color: var(--mainColour);
-        text-decoration-line: underline;
-        text-decoration-style: solid 3px;
-        -webkit-text-decoration: underline 3px var(--mainColour);
+        text-shadow: -2px -2px white, -2px 2px white, 2px -2px white,
+          2px 2px white;
+        background-size: 1px 1em;
+        box-shadow: inset 0 0em var(--mainColour),
+          inset 0 -3px var(--mainColour);
+        display: inline;
       }
       p {
         margin-top: 1rem;
@@ -268,8 +269,12 @@ const AccreditationsStyles = styled.div`
     color: var(--altColour);
 
     h4 {
-      text-decoration: underline 3px var(--mainColour);
       font-size: clamp(1.6rem, 50%, 2rem);
+      text-shadow: -2px -2px white, -2px 2px white, 2px -2px white,
+        2px 2px white;
+      background-size: 1px 1em;
+      box-shadow: inset 0 0em var(--mainColour), inset 0 -3px var(--mainColour);
+      display: inline;
     }
     p {
       margin: 1rem 0;

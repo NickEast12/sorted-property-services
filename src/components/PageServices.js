@@ -26,7 +26,12 @@ const PageServicesStyles = styled.div`
       h3 {
         color: var(--altColour);
         font-size: 1.4rem;
-        text-decoration: underline 2px var(--mainColour);
+        text-shadow: -2px -2px white, -2px 2px white, 2px -2px white,
+          2px 2px white;
+        background-size: 1px 1em;
+        box-shadow: inset 0 0em var(--mainColour),
+          inset 0 -3px var(--mainColour);
+        display: inline;
       }
       h5 {
         color: var(--altColour);

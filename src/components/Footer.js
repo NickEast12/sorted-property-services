@@ -22,9 +22,14 @@ const FooterStyles = styled.footer`
         padding: 0.5rem 0 0 0;
         h4 {
           font-weight: 700;
-          text-decoration: underline 2px var(--mainColour);
           width: 40%;
           font-size: clamp(1.1rem, 50%, 1.4rem);
+          text-shadow: -2px -2px var(--altColour), -2px 2px var(--altColour),
+            2px -2px var(--altColour), 2px 2px var(--altColour);
+          background-size: 1px 1em;
+          box-shadow: inset 0 0em var(--mainColour),
+            inset 0 -3px var(--mainColour);
+          display: inline;
         }
         ul {
           list-style: none;

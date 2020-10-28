@@ -42,7 +42,12 @@ const WhySortedStyles = styled.div`
       text-align: center;
       padding: 2rem 0;
       h2 {
-        text-decoration: underline 3px var(--mainColour);
+        text-shadow: -2px -2px var(--altColour), -2px 2px var(--altColour),
+          2px -2px var(--altColour), 2px 2px var(--altColour);
+        background-size: 1px 1em;
+        box-shadow: inset 0 0em var(--mainColour),
+          inset 0 -3px var(--mainColour);
+        display: inline;
       }
       p {
         color: var(--altBackground);
