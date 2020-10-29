@@ -105,6 +105,55 @@ const FooterStyles = styled.footer`
     .footer {
     }
   }
+  @media only screen and (min-width: 768px) {
+    .footer {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      &__social,
+      &__links {
+        padding-top: 0;
+        ul {
+          padding: 0.5rem 0;
+        }
+      }
+      &__social {
+        ul {
+          a {
+            li {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+      &__logo {
+        margin: 0;
+        width: 0;
+        padding: 2rem 0;
+        flex-grow: 2;
+        width: 0;
+        img {
+          width: 15 0px;
+        }
+      }
+    }
+    .legal {
+      &__wrapper {
+        &__right {
+          width: 115px;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .footer {
+      width: 80%;
+    }
+    .legal__wrapper {
+      width: 80%;
+    }
+  }
 `;
 
 const Footer = () => {

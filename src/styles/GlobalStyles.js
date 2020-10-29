@@ -34,6 +34,7 @@ const GlobalStyles = createGlobalStyle`
     a, a:visted {
         text-decoration: none;
         color: inherit;
+        cursor: pointer;
 
 
     }
@@ -79,6 +80,7 @@ const GlobalStyles = createGlobalStyle`
           inset 0 -3px var(--mainColour);
         display: inline;
     };
+  
 
 `;
 

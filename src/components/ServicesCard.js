@@ -41,15 +41,12 @@ const ServicesCardStyles = styled.div`
   }
   @media only screen and (min-width: 414px) {
     .services__content {
-      &__wrapper {
-        width: 80%;
-      }
     }
   }
 `;
 
 const ServicesCard = ({ img, title, text, link }) => (
-  <ServicesCardStyles>
+  <ServicesCardStyles className="service__cards">
     <div className="services__img">
       <Image alt="Property Services" filename={img} />
     </div>

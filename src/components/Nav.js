@@ -23,6 +23,13 @@ const CovidUpdateStyles = styled.section`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    div {
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
 `;
 
 const NavStyles = styled.nav`
@@ -78,6 +85,9 @@ const NavStyles = styled.nav`
         }
       }
     }
+  }
+  @media only screen and (min-width: 768px) {
+    display: none;
   }
 `;
 
@@ -206,8 +216,95 @@ const Nav = () => {
           </div>
         </MobileNavStyles>
       </NavStyles>
+      <DesktopNav />
     </>
   );
 };
+
+const DesktopNavStyles = styled.nav`
+  display: none;
+  @media only screen and (min-width: 768px) {
+    display: block;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: var(--altColour);
+    border-bottom: solid 2px var(--mainColour);
+    .desktop__inner {
+      width: 90%;
+      margin: 0 auto;
+      padding: 1rem 0;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      ul {
+        margin: 0;
+        padding: 0;
+        li:hover {
+          color: var(--mainColour);
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+      &__left {
+        display: flex;
+        list-style: none;
+        align-items: center;
+
+        gap: 1rem;
+        &__logo {
+          img {
+            width: 150px;
+          }
+        }
+      }
+      &__right {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .num {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .desktop__inner {
+      width: 80%;
+    }
+  }
+`;
+const DesktopNav = () => (
+  <DesktopNavStyles>
+    <div className="desktop__inner">
+      <ul className="desktop__inner__left">
+        <li className="desktop__inner__left__logo">
+          <Link to="/">
+            <img src={Logo} alt="Sorted Logo" />
+          </Link>
+        </li>
+        <li>
+          <Link to="/why-sorted">Why sorted</Link>
+        </li>
+        <li>
+          <Link to="/what-we-do">What we do</Link>
+        </li>
+      </ul>
+      <ul className="desktop__inner__right">
+        <li className="num">
+          <a href="tel:020 3962 5050">020 3962 5050</a>
+        </li>
+        <li>
+          <Link to="/contact">
+            <button type="button">Contact us</button>
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </DesktopNavStyles>
+);
 
 export default Nav;

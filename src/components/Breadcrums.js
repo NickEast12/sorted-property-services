@@ -3,28 +3,35 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Bready = styled.div`
-  width: 100%;
-  background: var(--altColour);
-  padding: 0.25rem 0;
-
-  .breadcrumb {
+  @media only screen and (min-width: 100px) {
     width: 100%;
-    margin: 0 auto;
-    ul {
-      width: 90%;
+    background: var(--altColour);
+    padding: 0.25rem 0;
+
+    .breadcrumb {
+      width: 100%;
       margin: 0 auto;
-      padding: 0;
-      display: flex;
-      list-style: none;
-      li {
-        font-weight: 500;
-        font-size: 0.85rem;
-        margin-right: 5px;
-        text-transform: capitalize;
-        a {
-          text-decoration: none;
+      ul {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        li {
+          font-weight: 500;
+          font-size: 0.85rem;
+          margin-right: 5px;
+          text-transform: capitalize;
+          a {
+            text-decoration: none;
+          }
         }
       }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .breadcrumb {
+      width: 90%;
     }
   }
 `;

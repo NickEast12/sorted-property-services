@@ -38,7 +38,7 @@ const CTA = () => (
       </h3>
       <p>
         We’re here 24/7 and ready to help. Any questions, just call
-        <span> 020 8879 6940 </span>.
+        <span> 020 3962 5050 </span>.
       </p>
       <Link to="/">
         <button type="button">Contact us now</button>

@@ -7,17 +7,57 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ServicesCard from '../components/ServicesCard';
 import Icon from '../svgs/email.svg';
+import Quidos from '../assets/images/quidos.png';
 
 const BodyStyles = styled.div`
   @media only screen and (min-width: 100px) {
     width: 100%;
     height: 100%;
     background: var(--altBackground);
+    padding-top: 1rem;
     .cards__wrapper {
     }
   }
-  @media only screen and (min-width: 375px) {
+  @media only screen and (min-width: 768px) {
     .cards__wrapper {
+      .service__cards {
+        &:nth-child(odd) {
+          display: flex;
+          position: relative;
+          margin-bottom: 1rem;
+          .services__img {
+            top: 1rem;
+            right: 0;
+            width: 40%;
+            position: absolute;
+            .gatsby-image-wrapper {
+              width: 250px;
+              margin: 0 auto;
+            }
+          }
+          .services__content {
+            width: 60%;
+          }
+        }
+        &:nth-child(even) {
+          position: relative;
+          margin-bottom: 1rem;
+          .services__img {
+            top: 1rem;
+            left: 0;
+            width: 40%;
+            position: absolute;
+            .gatsby-image-wrapper {
+              width: 250px;
+              margin: 0 auto;
+            }
+          }
+          .services__content {
+            width: 60%;
+            margin: 0 0 0 auto;
+          }
+        }
+      }
     }
   }
 `;
@@ -87,6 +127,7 @@ const MainHeaderStyles = styled.div`
           background: var(--altColour);
           color: var(--white);
           width: 60%;
+          font-size: clamp(1rem, 50%, 1.4rem);
         }
       }
     }
@@ -111,29 +152,60 @@ const MainHeaderStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    height: 89vh;
+    .title {
+      padding-top: 5rem;
+      &__content {
+        padding: 1rem 0;
+        width: 60%;
+        margin: 0 auto;
+        h1 {
+          font-size: 3rem;
+        }
+      }
+      &__img {
+        margin: 0 auto;
+        width: 80%;
+        .gatsby-image-wrapper {
+          width: 100%;
+          object-fit: center !important;
+          position: absolute;
+          top: 0;
+        }
+      }
+      &__btn {
+        button {
+          width: 40%;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    height: 92vh;
+  }
 `;
-const MainHeader = () => {
-  console.log('heder');
-  return (
-    <MainHeaderStyles>
-      <div className="title">
-        <div className="title__content">
-          <h1>
-            Your <span>one-stop shop</span> for property managers
-          </h1>
-        </div>
-        <div className="title__img">
-          <Image alt="Property Services" filename="background2.png" />
-        </div>
-        <div className="title__btn">
-          <Link to="/why-sorted">
-            <button type="button">Find out more</button>
-          </Link>
-        </div>
+const MainHeader = () => (
+  <MainHeaderStyles>
+    <div className="title">
+      <div className="title__content">
+        <h1>
+          Your <span>one-stop shop</span> for property managers
+        </h1>
       </div>
-    </MainHeaderStyles>
-  );
-};
+      <div className="title__img">
+        <Image alt="Property Services" filename="background2.png" />
+      </div>
+      <div className="title__btn">
+        <Link to="/why-sorted">
+          <button type="button">Find out more</button>
+        </Link>
+      </div>
+    </div>
+  </MainHeaderStyles>
+);
+
 const WhatSetsUsApartStyles = styled.div`
   @media only screen and (min-width: 100px) {
     .why-us {
@@ -188,6 +260,15 @@ const WhatSetsUsApartStyles = styled.div`
       width: 80%;
     }
   }
+  @media only screen and (min-width: 768px) {
+    background: white;
+    .why-us {
+      width: 70%;
+      ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
 `;
 const WhatSetsUsApart = () => (
   <WhatSetsUsApartStyles>
@@ -219,6 +300,9 @@ const WhatSetsUsApart = () => (
 );
 
 const ClientsStyles = styled.div`
+  .slick-slide {
+    padding: 0 15px;
+  }
   @media only screen and (min-width: 100px) {
     width: 100%;
     background: var(--altColour);
@@ -291,10 +375,39 @@ const AccreditationsStyles = styled.div`
       }
     }
   }
-
   @media only screen and (min-width: 414px) {
     .acc__content {
       width: 80%;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 2rem 0;
+    .acc__content {
+      width: 60%;
+      &__img {
+        display: flex;
+        flex-wrap: wrap;
+        &__fix {
+          flex-grow: 2;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .acc__content {
+      width: 60%;
+      &__img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        &__fix {
+          flex-grow: 4;
+          width: 150px;
+          height: 100%;
+          padding-top: 3rem;
+        }
+      }
     }
   }
 `;
@@ -314,9 +427,13 @@ const Accreditations = () => (
       </p>
 
       <div className="acc__content__img">
-        <Image alt="Property Services" filename="quidos.png" />
-        <Image alt="Property Services" filename="gassafe.jpg" />
-        <Image alt="Property Services" filename="napit.jpg" />
+        <img
+          className="acc__content__img__fix"
+          src={Quidos}
+          alt="Quidos Accreditations "
+        />
+        <Image alt="Gas Safe Accreditations" filename="gassafe.jpg" />
+        <Image alt="Napit Accreditations" filename="napit.jpg" />
       </div>
     </div>
   </AccreditationsStyles>

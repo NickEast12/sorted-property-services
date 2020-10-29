@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from './Image';
 
-const PageServicesStyles = styled.div`
+const PageServicesStyles = styled.section`
   @media only screen and (min-width: 100px) {
     width: 90%;
     margin: 0 auto 2rem auto;

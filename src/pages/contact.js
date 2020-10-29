@@ -8,7 +8,7 @@ import Email from '../svgs/email.svg';
 import Bread from '../components/Breadcrums';
 
 const ContactStyles = styled.div`
-  @media only screen and (min-width: 414px) {
+  @media only screen and (min-width: 100px) {
     width: 100%;
     .contact__map {
     }
@@ -21,7 +21,6 @@ const ContactStyles = styled.div`
         text-align: center;
         h1 {
           color: var(--altColour);
-          text-decoration: underline 3px var(--mainColour);
         }
         p {
           margin-top: 0.75rem;
@@ -141,6 +140,51 @@ const ContactStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    .contact__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+      &__left {
+        text-align: left;
+        width: 80%;
+        margin: 0 0 0 auto;
+        ul {
+          li {
+            flex-direction: row;
+            align-items: center;
+            span {
+              width: 35px;
+              svg {
+                width: 22.5px;
+                padding-top: 10px;
+              }
+            }
+          }
+          .mob {
+            font-size: 0.9rem;
+            li {
+              svg {
+                padding-right: 15px;
+              }
+            }
+          }
+        }
+      }
+      .form__wrapper {
+        width: 80%;
+        margin: 0 auto 0 0;
+        padding-top: 5px;
+        h2 {
+          text-align: left;
+        }
+        form {
+          margin: 0 auto 0 0;
+          width: 100%;
+        }
+      }
+    }
+  }
 `;
 
 const contact = ({ pageContext }) => (
@@ -152,7 +196,7 @@ const contact = ({ pageContext }) => (
       </div>
       <div className="contact__body">
         <div className="contact__body__left">
-          <h1>Contact us</h1>
+          <h1 className="underline-alt">Contact us</h1>
           <p>
             For more information on how Sorted can streamline your property
             maintenance work, get in touch.
