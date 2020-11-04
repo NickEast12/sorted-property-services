@@ -106,7 +106,7 @@ const index = () => {
   const i = 'help';
   return (
     <Layout>
-      <SEO title="Boo" />
+      <SEO />
       <MainHeader />
       <BodyStyles>
         <div className="cards__wrapper">
@@ -402,15 +402,16 @@ const ClientsStyles = styled.div`
       padding: 4rem 0;
     }
   }
+
   @media only screen and (min-width: 1280px) {
     .clients__wrapper {
       h3 {
         font-size: 1.9rem;
       }
-      p {
-        font-size: 1.2rem;
+      /* p {
+        font-size: 0.95rem;
         padding: 0.75rem 0;
-      }
+      } */
     }
   }
 `;

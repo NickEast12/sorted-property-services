@@ -7,7 +7,8 @@ import Image from './Image';
 const CovidUpdateStyles = styled.section`
   @media only screen and (min-width: 100px) {
     width: 100%;
-    background: RGB(58, 121, 255);
+    background: var(--black);
+    /* background: RGB(58, 121, 255); */
 
     div {
       padding: 0.5rem 0;
@@ -20,6 +21,7 @@ const CovidUpdateStyles = styled.section`
         color: var(--white);
         span {
           font-weight: 600;
+          color: var(--mainColour);
         }
       }
     }

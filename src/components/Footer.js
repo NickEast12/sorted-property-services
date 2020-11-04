@@ -36,6 +36,9 @@ const FooterStyles = styled.footer`
             li {
               padding: 0.5rem 0;
               color: var(--white);
+              &:hover {
+                color: var(--mainColour);
+              }
             }
           }
         }
@@ -201,73 +204,70 @@ const FooterStyles = styled.footer`
   }
 `;
 
-const Footer = () => {
-  console.log('te4st');
-  return (
-    <FooterStyles>
-      <div className="footer">
-        <div className="footer__links">
-          <h4 className="underline-background">Quick Links</h4>
-          <ul>
-            <Link to="/why-sorted">
-              <li>Why Sorted</li>
-            </Link>
-            <Link to="/what-we-do">
-              <li>What we do</li>
-            </Link>
-            <Link to="/contact">
-              <li>Contact</li>
-            </Link>
-          </ul>
+const Footer = () => (
+  <FooterStyles>
+    <div className="footer">
+      <div className="footer__links">
+        <h4 className="underline-background">Quick Links</h4>
+        <ul>
+          <Link to="/why-sorted">
+            <li>Why Sorted</li>
+          </Link>
+          <Link to="/what-we-do">
+            <li>What we do</li>
+          </Link>
+          <Link to="/contact">
+            <li>Contact</li>
+          </Link>
+        </ul>
+      </div>
+      <div className="footer__social">
+        <h4 className="underline-background">Contact</h4>
+        <ul>
+          <Link to="/">
+            <li>
+              <span>
+                <Email />
+              </span>
+              - workorders@sortedpropertyservices.co.uk
+            </li>
+          </Link>
+          <Link to="/">
+            <li>
+              <span>
+                <Phone />
+              </span>
+              - 020 3962 5050
+            </li>
+          </Link>
+          <Link to="/">
+            <li>
+              <span>
+                <Address />
+              </span>
+              - Unit 1 Ensign House, Rope Street, London SE16 7EX
+            </li>
+          </Link>
+        </ul>
+      </div>
+      <div className="footer__logo">
+        <img src={Logo} alt="Sorted Logo" />
+      </div>
+    </div>
+    <div className="legal">
+      <div className="legal__wrapper">
+        <div className="legal__wrapper__left">
+          <p>&copy; Sorted Property Services {new Date().getFullYear()}</p>
         </div>
-        <div className="footer__social">
-          <h4 className="underline-background">Contact</h4>
-          <ul>
-            <Link to="/">
-              <li>
-                <span>
-                  <Email />
-                </span>
-                - workorders@sortedpropertyservices.co.uk
-              </li>
-            </Link>
-            <Link to="/">
-              <li>
-                <span>
-                  <Phone />
-                </span>
-                - 020 3962 5050
-              </li>
-            </Link>
-            <Link to="/">
-              <li>
-                <span>
-                  <Address />
-                </span>
-                - Unit 1 Ensign House, Rope Street, London SE16 7EX
-              </li>
-            </Link>
-          </ul>
-        </div>
-        <div className="footer__logo">
-          <img src={Logo} alt="Sorted Logo" />
+        <div className="legal__wrapper__right">
+          <Instagram />
+          <Facebook />
+          <Twitter />
+          <Linkedin />
         </div>
       </div>
-      <div className="legal">
-        <div className="legal__wrapper">
-          <div className="legal__wrapper__left">
-            <p>&copy; Sorted Property Services {new Date().getFullYear()}</p>
-          </div>
-          <div className="legal__wrapper__right">
-            <Instagram />
-            <Facebook />
-            <Twitter />
-            <Linkedin />
-          </div>
-        </div>
-      </div>
-    </FooterStyles>
-  );
-};
+    </div>
+  </FooterStyles>
+);
 
 export default Footer;

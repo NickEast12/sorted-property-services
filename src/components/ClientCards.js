@@ -13,7 +13,7 @@ const CardStyles = styled.div`
     p {
       font-style: italic;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
     h4 {
       color: var(--altColour);
@@ -26,10 +26,26 @@ const CardStyles = styled.div`
       font-size: 1.1rem;
     }
   }
+  @media only screen and (min-width: 375px) {
+    p {
+      font-size: 0.95rem;
+    }
+  }
   @media only screen and (min-width: 414px) {
     p {
       font-size: 1rem;
     }
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1024px) {
+    padding: 2.5rem 2rem 1rem 2rem;
+  }
+  @media only screen and (min-width: 1280px) {
+    padding: 1.5rem 2rem 1rem 2rem;
+  }
+  @media only screen and (min-width: 1440px) {
+    padding: 2.5rem 2rem 1rem 2rem;
   }
 `;
 
@@ -50,6 +66,14 @@ const ClientCards = () => {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
         },
       },
       {
@@ -121,30 +145,35 @@ const ClientCards = () => {
     <Slider {...settings}>
       <CardStyles>
         <p>
-          “I want to leave a good review for the work that was done today in my
-          flat – repairing a bathroom extractor that wasn’t working. The workman
-          was very kind and the extractor was properly fixed.
+          “A Sorted engineer attended our house for an energy check yesterday. I
+          just wanted to say thank you – he went out of his way to help get our
+          little girl’s radiator working. It’s lovely to have somebody who wants
+          to help.”
         </p>
         <h4>Joe Bloggs</h4>
-        <h5>Company Name</h5>
       </CardStyles>
       <CardStyles>
         <p>
           “I want to leave a good review for the work that was done today in my
           flat – repairing a bathroom extractor that wasn’t working. The workman
-          was very kind and the extractor was properly fixed.
+          was very kind and the extractor was properly fixed."
         </p>
         <h4>Joe Bloggs</h4>
-        <h5>Company Name</h5>
       </CardStyles>
       <CardStyles>
         <p>
-          “I want to leave a good review for the work that was done today in my
-          flat – repairing a bathroom extractor that wasn’t working. The workman
-          was very kind and the extractor was properly fixed.
+          “I just wanted to send a note thanking you for the work that your
+          engineer did today and last week on my apartment. He was very
+          efficient, polite and a pleasure to work with.”
         </p>
         <h4>Joe Bloggs</h4>
-        <h5>Company Name</h5>
+      </CardStyles>
+      <CardStyles>
+        <p>
+          “I recently had Steven over to paint my bathroom ceiling, where there
+          had been visible water damage. He went above and beyond!”
+        </p>
+        <h4>Joe Bloggs</h4>
       </CardStyles>
     </Slider>
   );

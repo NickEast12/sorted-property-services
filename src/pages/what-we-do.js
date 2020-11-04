@@ -188,7 +188,7 @@ const WhatWeDoPage = ({ pageContext }) => (
         <PageServices
           id="gasandplumbing"
           imgAlt="Gas &amp; Plumbing"
-          img="placeholder.png"
+          img="plumbing-stock.png"
           title="Gas &amp; Plumbing"
           intro="Carried out by gas safe registered engineers, our gas &amp; plumbing services include:"
           list={GasArray}
@@ -196,7 +196,7 @@ const WhatWeDoPage = ({ pageContext }) => (
         <PageServices
           id="multi-trade"
           imgAlt="Multi-trade"
-          img="placeholder.png"
+          img="trade-stock.png"
           title="Multi-trade"
           intro="At Sorted, we have a skilled professional to cover any type of job, including:"
           list={TradeArray}
