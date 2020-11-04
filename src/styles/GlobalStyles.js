@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
         /* --altFont: NexaLight; */
         --m: 0 auto;
         --testing: dotted 1px red;
+        --pageMax: 1150px;
     }
     *, *:after, *:before {
         box-sizing: border-box;
@@ -35,6 +36,9 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: inherit;
         cursor: pointer;
+        &:hover {
+          color: var(--mainColour);
+        }
 
 
     }
@@ -52,6 +56,7 @@ const GlobalStyles = createGlobalStyle`
         border-radius: 3.5px;
         color: var(--altColour);
         cursor: pointer;
+        text-transform: capitalize;
         
     }
     input:focus { outline: none; };

@@ -16,13 +16,13 @@ const CardStyles = styled.div`
       font-size: 0.9rem;
     }
     h4 {
-      color: var(--black);
+      color: var(--altColour);
       font-size: 1.2rem;
       margin: 1rem 0 0.5rem 0;
     }
     h5 {
       color: var(--mainColour);
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.1rem;
     }
   }
@@ -40,9 +40,7 @@ const ClientCards = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     slidesToShow: 3,
-    slidesToScroll: 4,
     initialSlide: 0,
-    centerPadding: '60px',
     arrows: false,
     responsive: [
       {
@@ -55,11 +53,59 @@ const ClientCards = () => {
         },
       },
       {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 510,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 414,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {

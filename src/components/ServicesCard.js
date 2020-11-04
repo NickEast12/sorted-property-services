@@ -31,6 +31,7 @@ const ServicesCardStyles = styled.div`
         a {
           button {
             margin-top: 1rem;
+            font-weight: 500;
           }
         }
       }
@@ -39,8 +40,17 @@ const ServicesCardStyles = styled.div`
   @media only screen and (min-width: 375px) {
     padding: 1rem 0;
   }
-  @media only screen and (min-width: 414px) {
+  @media only screen and (min-width: 1280px) {
     .services__content {
+      &__wrapper {
+        width: 65%;
+        h2 {
+          font-size: 2.25rem;
+        }
+        p {
+          font-size: 1.15rem;
+        }
+      }
     }
   }
 `;

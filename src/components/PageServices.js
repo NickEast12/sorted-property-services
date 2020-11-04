@@ -48,6 +48,19 @@ const PageServicesStyles = styled.section`
       padding: 2rem 1rem;
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .ps-content {
+      h3 {
+        font-size: 1.6rem;
+      }
+      h5 {
+        font-size: 1.1rem;
+      }
+      ul li {
+        font-size: 1rem;
+      }
+    }
+  }
 `;
 
 const PageServices = ({ id, imgAlt, img, title, intro, list }) => {

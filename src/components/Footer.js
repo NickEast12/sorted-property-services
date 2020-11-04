@@ -111,6 +111,7 @@ const FooterStyles = styled.footer`
       display: flex;
       justify-content: space-between;
       gap: 3rem;
+      padding-bottom: 1rem;
       &__social,
       &__links {
         padding-top: 0;
@@ -152,6 +153,50 @@ const FooterStyles = styled.footer`
     }
     .legal__wrapper {
       width: 80%;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .footer {
+      padding: 2rem 0;
+      &__links {
+        h4 {
+          font-size: 1.25rem;
+        }
+        ul a li {
+          font-size: 1.05rem;
+        }
+      }
+      &__social {
+        flex-grow: 1;
+        h4 {
+          font-size: 1.25rem;
+        }
+        ul a li {
+          font-size: 1.05rem;
+        }
+      }
+      &__logo {
+        padding: 2.5rem 0 0 0;
+        text-align: right;
+        img {
+          width: 200px;
+        }
+      }
+    }
+    .legal {
+      &__wrapper {
+        &__left {
+          p {
+            font-size: 1rem;
+          }
+        }
+        &__right {
+          width: 15%;
+          svg {
+            width: 50px;
+          }
+        }
+      }
     }
   }
 `;

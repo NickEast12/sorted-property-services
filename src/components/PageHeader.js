@@ -51,17 +51,39 @@ const PageHeaderStyles = styled.div`
       position: absolute;
     }
   }
+  @media only screen and (min-width: 1280px) {
+    padding: 7rem 0;
+    .header-wrap {
+      width: 80%;
+      position: relative;
+      margin: 0 auto;
+      max-width: var(--pageMax);
+    }
+    .header__content {
+      width: 100%;
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .header__img {
+      width: 40%;
+      right: 0;
+      top: -6rem;
+    }
+  }
 `;
 
 const PageHeader = ({ title }) => {
   console.log('header');
   return (
     <PageHeaderStyles>
-      <div className="header__content">
-        <h1>{title}</h1>
-      </div>
-      <div className="header__img">
-        <Image alt="Property Services" filename="background2.png" />
+      <div className="header-wrap">
+        <div className="header__content">
+          <h1>{title}</h1>
+        </div>
+        <div className="header__img">
+          <Image alt="Property Services" filename="background2.png" />
+        </div>
       </div>
     </PageHeaderStyles>
   );

@@ -7,7 +7,8 @@ import Image from './Image';
 const CovidUpdateStyles = styled.section`
   @media only screen and (min-width: 100px) {
     width: 100%;
-    background: var(--mainColour);
+    background: RGB(58, 121, 255);
+
     div {
       padding: 0.5rem 0;
       width: 90%;
@@ -16,7 +17,7 @@ const CovidUpdateStyles = styled.section`
       p {
         font-size: 0.75rem;
 
-        color: var(--black);
+        color: var(--white);
         span {
           font-weight: 600;
         }
@@ -27,6 +28,13 @@ const CovidUpdateStyles = styled.section`
     div {
       p {
         font-size: 0.8rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    div {
+      p {
+        font-size: 0.95rem;
       }
     }
   }
@@ -268,12 +276,16 @@ const DesktopNavStyles = styled.nav`
         .num {
           font-weight: 600;
         }
+        button {
+          font-weight: 500;
+        }
       }
     }
   }
   @media only screen and (min-width: 1024px) {
     .desktop__inner {
       width: 80%;
+      font-size: 1.1rem;
     }
   }
 `;

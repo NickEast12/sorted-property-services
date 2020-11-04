@@ -7,7 +7,9 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ServicesCard from '../components/ServicesCard';
 import Icon from '../svgs/email.svg';
-import Quidos from '../assets/images/quidos.png';
+import Quidos from '../assets/images/Quidos-White.png';
+import Napit from '../assets/images/napit-logo-2017.webp';
+import Gas from '../assets/images/gas-safe.png';
 
 const BodyStyles = styled.div`
   @media only screen and (min-width: 100px) {
@@ -55,6 +57,44 @@ const BodyStyles = styled.div`
           .services__content {
             width: 60%;
             margin: 0 0 0 auto;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .cards__wrapper {
+      padding: 2rem 0;
+      .service__cards {
+        &:nth-child(odd) {
+          .services__img {
+            top: 1rem;
+            right: 0;
+            width: 50%;
+            .gatsby-image-wrapper {
+              width: 300px;
+              margin: 0 auto;
+            }
+          }
+          .services__content {
+            width: 50%;
+            button {
+              font-size: 1.25rem;
+            }
+          }
+        }
+        &:nth-child(even) {
+          .services__img {
+            width: 50%;
+            .gatsby-image-wrapper {
+              width: 300px;
+            }
+          }
+          .services__content {
+            width: 50%;
+            button {
+              font-size: 1.25rem;
+            }
           }
         }
       }
@@ -166,7 +206,7 @@ const MainHeaderStyles = styled.div`
       }
       &__img {
         margin: 0 auto;
-        width: 80%;
+        width: 60%;
         .gatsby-image-wrapper {
           width: 100%;
           object-fit: center !important;
@@ -176,7 +216,7 @@ const MainHeaderStyles = styled.div`
       }
       &__btn {
         button {
-          width: 40%;
+          width: 20%;
           font-size: 1.2rem;
         }
       }
@@ -184,6 +224,17 @@ const MainHeaderStyles = styled.div`
   }
   @media only screen and (min-width: 1024px) {
     height: 92vh;
+  }
+  @media only screen and (min-width: 1280px) {
+    height: 86vh;
+    .title {
+      padding-top: 2.5rem;
+      &__content {
+      }
+      &__img {
+        width: 55%;
+      }
+    }
   }
 `;
 const MainHeader = () => (
@@ -269,6 +320,21 @@ const WhatSetsUsApartStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .why-us {
+      width: 60%;
+      h2 {
+        font-size: 2.25rem;
+      }
+      p {
+        font-size: 1.15rem;
+        padding: 0.25rem 0;
+      }
+      ul li {
+        font-size: 1.1rem;
+      }
+    }
+  }
 `;
 const WhatSetsUsApart = () => (
   <WhatSetsUsApartStyles>
@@ -336,11 +402,22 @@ const ClientsStyles = styled.div`
       padding: 4rem 0;
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .clients__wrapper {
+      h3 {
+        font-size: 1.9rem;
+      }
+      p {
+        font-size: 1.2rem;
+        padding: 0.75rem 0;
+      }
+    }
+  }
 `;
 const Clients = () => (
   <ClientsStyles>
     <div className="clients__wrapper">
-      <h3>Don't just take our word for it</h3>
+      <h3 className="underline-background">Don't just take our word for it</h3>
       <p>What our clients have to say</p>
       <div className="clients__wrapper__cards">
         <ClientCards />
@@ -366,11 +443,38 @@ const AccreditationsStyles = styled.div`
         margin: 1rem 0;
       }
       &__img {
-        width: 80%;
-        margin: 2rem auto 0 auto;
-        .gatsby-image-wrapper {
-          width: 135px;
-          margin: 1rem auto;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        &__box {
+          margin: 0 auto;
+          background: #d0d0d0;
+          margin-bottom: 1rem;
+          padding: 1rem;
+          border-radius: 2px;
+          width: 55%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          &:nth-child(1) img {
+            padding: 0.25rem 0;
+          }
+          &:nth-child(2) img {
+            padding: 0.25rem 0;
+          }
+          &:nth-child(3) {
+            padding: 0.4rem;
+            img {
+              width: 50%;
+              height: 80% !important;
+            }
+          }
+          img {
+            width: 100%;
+          }
         }
       }
     }
@@ -380,33 +484,42 @@ const AccreditationsStyles = styled.div`
       width: 80%;
     }
   }
+  @media only screen and (min-width: 550px) {
+    .acc__content {
+      &__img {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
   @media only screen and (min-width: 768px) {
     padding: 2rem 0;
     .acc__content {
       width: 60%;
       &__img {
         display: flex;
-        flex-wrap: wrap;
-        &__fix {
-          flex-grow: 2;
-        }
+        flex-direction: row;
       }
     }
   }
   @media only screen and (min-width: 1024px) {
     .acc__content {
       width: 60%;
+      padding: 2rem 0;
       &__img {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 1rem;
-        &__fix {
-          flex-grow: 4;
-          width: 150px;
-          height: 100%;
-          padding-top: 3rem;
-        }
+        width: 70%;
+        padding: 2rem 0;
+        margin: 0 auto;
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .acc__content {
+      h4 {
+        font-size: 1.9rem;
+      }
+      p {
+        font-size: 1.2rem;
       }
     }
   }
@@ -427,13 +540,24 @@ const Accreditations = () => (
       </p>
 
       <div className="acc__content__img">
-        <img
-          className="acc__content__img__fix"
-          src={Quidos}
-          alt="Quidos Accreditations "
-        />
-        <Image alt="Gas Safe Accreditations" filename="gassafe.jpg" />
-        <Image alt="Napit Accreditations" filename="napit.jpg" />
+        {/* <div className="acc__content__img__box">
+          <Image alt="Quidos Accreditations" filename="Quidos-White.png" />
+        </div>
+        <div className="acc__content__img__box">
+          <Image alt="Gas Safe Accreditations" filename="gas-safe.png" />
+        </div>
+        <div className="acc__content__img__box">
+          <Image alt="Napit Accreditations" filename="napit-logo-2017.webp" />
+        </div> */}
+        <div className="acc__content__img__box">
+          <img src={Quidos} alt="Quidos Accreditations" />
+        </div>
+        <div className="acc__content__img__box">
+          <img src={Napit} alt="Napit Accreditations" />
+        </div>
+        <div className="acc__content__img__box">
+          <img src={Gas} alt="Gas Safe Accreditations" />
+        </div>
       </div>
     </div>
   </AccreditationsStyles>

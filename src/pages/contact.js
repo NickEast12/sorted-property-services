@@ -173,7 +173,7 @@ const ContactStyles = styled.div`
       }
       .form__wrapper {
         width: 80%;
-        margin: 0 auto 0 0;
+        margin: 0.25rem auto 0 0;
         padding-top: 5px;
         h2 {
           text-align: left;
@@ -181,7 +181,30 @@ const ContactStyles = styled.div`
         form {
           margin: 0 auto 0 0;
           width: 100%;
+          .form-input {
+            display: flex;
+            gap: 1rem;
+            input {
+              width: 50%;
+            }
+          }
         }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .contact__body {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      ul li {
+        font-size: 1.2rem;
+      }
+      ul .mob {
+        font-size: 1.2rem;
       }
     }
   }

@@ -49,7 +49,7 @@ const WWDStyles = styled.div`
       h2 {
         color: var(--black);
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 600;
         span {
           font-weight: 700;
           font-size: 1.1rem;
@@ -128,6 +128,23 @@ const WWDStyles = styled.div`
     .wwd__cards {
       width: 95%;
       margin: 0 auto;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .wwd__content {
+      width: 80%;
+      h2 {
+        font-size: 1.25rem;
+        span {
+          font-size: 1.35rem;
+        }
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+    .wwd__cards {
+      width: 100%;
     }
   }
 `;

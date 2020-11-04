@@ -18,7 +18,7 @@ const WhySortedStyles = styled.div`
       h2 {
         color: var(--black);
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 600;
         span {
           font-weight: 700;
           font-size: 1.1rem;
@@ -76,6 +76,28 @@ const WhySortedStyles = styled.div`
     .why__team {
       &__wrapper {
         width: 75%;
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    .why__wrapper {
+      width: 80%;
+      h2 {
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+    .why__team {
+      &__wrapper {
+        width: 80%;
+        h2 {
+          font-size: 1.85rem;
+        }
+        p {
+          font-size: 1.1rem;
+        }
       }
     }
   }

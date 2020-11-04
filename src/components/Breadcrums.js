@@ -34,6 +34,13 @@ const Bready = styled.div`
       width: 90%;
     }
   }
+  @media only screen and (min-width: 1280px) {
+    .breadcrumb {
+      ul li {
+        font-size: 0.95rem;
+      }
+    }
+  }
 `;
 
 const Bread = ({ breaddata }) => {
