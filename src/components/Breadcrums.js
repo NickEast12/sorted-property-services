@@ -10,6 +10,7 @@ const Bready = styled.div`
 
     .breadcrumb {
       width: 100%;
+      max-width: 1440px;
       margin: 0 auto;
       ul {
         width: 90%;

@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
         --m: 0 auto;
         --testing: dotted 1px red;
         --pageMax: 1150px;
+        --maxWidth: 1300px;
     }
     *, *:after, *:before {
         box-sizing: border-box;

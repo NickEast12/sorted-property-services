@@ -18,6 +18,7 @@ const BodyStyles = styled.div`
     background: var(--altBackground);
     padding-top: 1rem;
     .cards__wrapper {
+      margin: 0 auto;
     }
   }
   @media only screen and (min-width: 768px) {
@@ -236,6 +237,12 @@ const MainHeaderStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 1440px) {
+    height: 90vh;
+    .title {
+      max-width: var(--maxWidth);
+    }
+  }
 `;
 const MainHeader = () => (
   <MainHeaderStyles>
@@ -323,12 +330,16 @@ const WhatSetsUsApartStyles = styled.div`
   @media only screen and (min-width: 1280px) {
     .why-us {
       width: 60%;
+      max-width: var(--maxWidth);
+
       h2 {
         font-size: 2.25rem;
       }
       p {
         font-size: 1.15rem;
-        padding: 0.25rem 0;
+        padding: 0.75rem 0;
+        width: 70%;
+        margin: 0 auto;
       }
       ul li {
         font-size: 1.1rem;
@@ -405,6 +416,7 @@ const ClientsStyles = styled.div`
 
   @media only screen and (min-width: 1280px) {
     .clients__wrapper {
+      max-width: var(--maxWidth);
       h3 {
         font-size: 1.9rem;
       }
@@ -516,11 +528,30 @@ const AccreditationsStyles = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     .acc__content {
+      max-width: var(--maxWidth);
+
       h4 {
         font-size: 1.9rem;
       }
       p {
         font-size: 1.2rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 1440px) {
+    .acc__content {
+      &__img {
+        &__box {
+          &:nth-child(1) {
+            max-width: 200px;
+          }
+          &:nth-child(2) {
+            max-width: 200px;
+          }
+          &:nth-child(3) {
+            max-width: 190px;
+          }
+        }
       }
     }
   }

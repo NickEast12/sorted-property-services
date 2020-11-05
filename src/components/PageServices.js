@@ -61,6 +61,9 @@ const PageServicesStyles = styled.section`
       }
     }
   }
+  @media only screen and (min-width: 1440px) {
+    max-width: var(--maxWidth);
+  }
 `;
 
 const PageServices = ({ id, imgAlt, img, title, intro, list }) => {

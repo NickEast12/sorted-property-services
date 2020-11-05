@@ -11,6 +11,7 @@ const WhySortedStyles = styled.div`
     background: var(--altBackground);
     .why__wrapper {
       width: 90%;
+      max-width: var(--maxWidth);
       margin: 0 auto;
       text-align: center;
       padding: 2rem 0;
@@ -39,6 +40,7 @@ const WhySortedStyles = styled.div`
       background: var(--white);
       &__wrapper {
         width: 90%;
+        max-width: var(--maxWidth);
         margin: 0 auto;
         text-align: center;
         padding: 2rem 0;

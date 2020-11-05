@@ -17,6 +17,7 @@ const FooterStyles = styled.footer`
       width: 90%;
       margin: 0 auto;
       padding-top: 1.5rem;
+      max-width: var(--maxWidth);
       &__links,
       &__social {
         padding: 0.5rem 0 0 0;
@@ -84,6 +85,7 @@ const FooterStyles = styled.footer`
         width: 90%;
         margin: 0 auto;
         display: flex;
+        max-width: var(--maxWidth);
         justify-content: space-between;
         &__left {
           width: auto;

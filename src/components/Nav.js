@@ -15,6 +15,8 @@ const CovidUpdateStyles = styled.section`
       width: 90%;
       margin: 0 auto;
       text-align: center;
+      max-width: var(--maxWidth);
+
       p {
         font-size: 0.75rem;
 
@@ -57,6 +59,7 @@ const NavStyles = styled.nav`
     .mobile-nav-wrapper {
       width: 90%;
       margin: 0 auto;
+
       position: relative;
     }
     .mobile-logo {
@@ -245,9 +248,9 @@ const DesktopNavStyles = styled.nav`
       width: 90%;
       margin: 0 auto;
       padding: 1rem 0;
-      max-width: 1200px;
       display: flex;
       justify-content: space-between;
+      max-width: var(--maxWidth);
       ul {
         margin: 0;
         padding: 0;

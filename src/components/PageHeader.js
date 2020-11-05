@@ -55,6 +55,7 @@ const PageHeaderStyles = styled.div`
     padding: 7rem 0;
     .header-wrap {
       width: 80%;
+      max-width: var(--maxWidth);
       position: relative;
       margin: 0 auto;
       max-width: var(--pageMax);

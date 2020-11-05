@@ -43,6 +43,7 @@ const WWDStyles = styled.div`
     .wwd__content {
       background: var(--altBackground);
       width: 90%;
+      max-width: var(--maxWidth);
       margin: 0 auto;
       text-align: center;
       padding: 2rem 0 1rem 0;
@@ -68,6 +69,7 @@ const WWDStyles = styled.div`
     }
     .wwd__cards {
       margin: 1rem 0;
+      max-width: var(--maxWidth);
     }
   }
   @media only screen and (min-width: 768px) {

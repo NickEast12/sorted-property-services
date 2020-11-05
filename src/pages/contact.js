@@ -10,10 +10,10 @@ import Bread from '../components/Breadcrums';
 const ContactStyles = styled.div`
   @media only screen and (min-width: 100px) {
     width: 100%;
+    background: var(--altBackground);
     .contact__map {
     }
     .contact__body {
-      background: var(--altBackground);
       padding: 3rem 0;
       &__left {
         width: 90%;
@@ -142,9 +142,13 @@ const ContactStyles = styled.div`
   }
   @media only screen and (min-width: 768px) {
     .contact__body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 2rem;
+      background: var(--altBackground);
+      .contact__fix {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        margin: 0 auto;
+      }
       &__left {
         text-align: left;
         width: 80%;
@@ -194,6 +198,9 @@ const ContactStyles = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     .contact__body {
+      .contact__fix {
+        max-width: 1600px;
+      }
       h1 {
         font-size: 2.5rem;
       }
@@ -218,84 +225,86 @@ const contact = ({ pageContext }) => (
         <Maps />
       </div>
       <div className="contact__body">
-        <div className="contact__body__left">
-          <h1 className="underline-alt">Contact us</h1>
-          <p>
-            For more information on how Sorted can streamline your property
-            maintenance work, get in touch.
-          </p>
-          <ul>
-            <li>
-              <span>
-                <Address />
-              </span>
-              Unit 1 Ensign House, Rope Street, London SE16 7EX
-            </li>
-            <li>
-              <span>
-                <Phone />
-              </span>
-              020 3962 5050
-            </li>
-            <li className="mob">
-              <span>
-                <Email />
-              </span>
-              workorders@sortedpropertyservices.co.uk
-            </li>
-            <li className="desk">
-              <span>
-                <Email />
-              </span>
-              <a href="mailto:workorders@sortedpropertyservices.co.uk">
-                Email us
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="form__wrapper">
-          <h2>Or fill out this form </h2>
-          <form action="" method="post">
-            <fieldset>
-              <div className="form-input">
-                <label htmlFor="Name">
-                  Name <span>*</span>
-                  <input type="text" required />
-                </label>
-                <label htmlFor="Company Name">
-                  Company Name <span>*</span>
-                  <input type="text" required />
-                </label>
-              </div>
-              <div className="form-input">
-                <label htmlFor="Company Name">
-                  Email Address <span>*</span>
-                  <input type="email" required />
-                </label>
-                <label htmlFor="Company Name">
-                  Phone Number <span>*</span>
-                  <input
-                    type="tel"
-                    name="phone"
-                    pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
-                    id="phone"
-                    required
-                  />
-                </label>
-              </div>
-              <div className="form-textarea">
-                <label htmlFor="message">
-                  {' '}
-                  Message <span>*</span>
-                  <textarea name="message" required />
-                </label>
-              </div>
-              <div className="form-btn">
-                <button type="button">Submit</button>
-              </div>
-            </fieldset>
-          </form>
-        </div>
+        <section className="contact__fix">
+          <div className="contact__body__left">
+            <h1 className="underline-alt">Contact us</h1>
+            <p>
+              For more information on how Sorted can streamline your property
+              maintenance work, get in touch.
+            </p>
+            <ul>
+              <li>
+                <span>
+                  <Address />
+                </span>
+                Unit 1 Ensign House, Rope Street, London SE16 7EX
+              </li>
+              <li>
+                <span>
+                  <Phone />
+                </span>
+                020 3962 5050
+              </li>
+              <li className="mob">
+                <span>
+                  <Email />
+                </span>
+                workorders@sortedpropertyservices.co.uk
+              </li>
+              <li className="desk">
+                <span>
+                  <Email />
+                </span>
+                <a href="mailto:workorders@sortedpropertyservices.co.uk">
+                  Email us
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="form__wrapper">
+            <h2>Or fill out this form </h2>
+            <form action="" method="post">
+              <fieldset>
+                <div className="form-input">
+                  <label htmlFor="Name">
+                    Name <span>*</span>
+                    <input type="text" required />
+                  </label>
+                  <label htmlFor="Company Name">
+                    Company Name <span>*</span>
+                    <input type="text" required />
+                  </label>
+                </div>
+                <div className="form-input">
+                  <label htmlFor="Company Name">
+                    Email Address <span>*</span>
+                    <input type="email" required />
+                  </label>
+                  <label htmlFor="Company Name">
+                    Phone Number <span>*</span>
+                    <input
+                      type="tel"
+                      name="phone"
+                      pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+                      id="phone"
+                      required
+                    />
+                  </label>
+                </div>
+                <div className="form-textarea">
+                  <label htmlFor="message">
+                    {' '}
+                    Message <span>*</span>
+                    <textarea name="message" required />
+                  </label>
+                </div>
+                <div className="form-btn">
+                  <button type="button">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </section>
       </div>
     </ContactStyles>
   </Layout>
