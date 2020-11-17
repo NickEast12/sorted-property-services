@@ -109,7 +109,7 @@ const WhySortedPage = ({ pageContext }) => (
   <Layout>
     <Bread breaddata={pageContext.breadcrumb} />
     <WhySortedStyles>
-      <PageHeader title="Why Sorted?" />
+      <PageHeader title="Why Sorted?" img="sorted-alt.png" />
       <div className="why__wrapper">
         <h2>
           No other maintenance company has been built by property managers for

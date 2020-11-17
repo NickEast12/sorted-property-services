@@ -64,6 +64,9 @@ const ContactStyles = styled.div`
           margin-bottom: 1rem;
         }
         form {
+          .hidden {
+            display: none;
+          }
           width: 90%;
           margin: 0 auto;
           fieldset {
@@ -263,22 +266,33 @@ const contact = ({ pageContext }) => (
           </div>
           <div className="form__wrapper">
             <h2>Or fill out this form </h2>
-            <form action="" method="post">
+            <form
+              name="Contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
               <fieldset>
                 <div className="form-input">
+                  <p className="hidden">
+                    <label>
+                      Don’t fill this out if you're human:{' '}
+                      <input name="bot-field" />
+                    </label>
+                  </p>
                   <label htmlFor="Name">
                     Name <span>*</span>
-                    <input type="text" required />
+                    <input type="text" name="name" required />
                   </label>
                   <label htmlFor="Company Name">
                     Company Name <span>*</span>
-                    <input type="text" required />
+                    <input type="text" name="company name" required />
                   </label>
                 </div>
                 <div className="form-input">
                   <label htmlFor="Company Name">
                     Email Address <span>*</span>
-                    <input type="email" required />
+                    <input type="email" name="email address" required />
                   </label>
                   <label htmlFor="Company Name">
                     Phone Number <span>*</span>

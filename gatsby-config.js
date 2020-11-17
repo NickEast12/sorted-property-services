@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: `https://wwww.nick-east.com`,
     description: `fill this in later`,
     twitter: `@comebacktothis`,
+    image: `/favicon.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -60,7 +61,7 @@ module.exports = {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.
-        color: `#000000`,
+        color: `#e1000`,
         // Disable the loading spinner.
         showSpinner: true,
       },
@@ -76,6 +77,23 @@ module.exports = {
           `/offline-plugin-app-shell-fallback/`,
         ],
         trailingSlashes: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: '111',
+        head: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: '111',
+          anonymize: true,
+        },
+        environments: ['production', 'development'],
       },
     },
   ],

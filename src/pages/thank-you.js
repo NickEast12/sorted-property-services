@@ -2,13 +2,13 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Message from '../components/Message';
 
-const ErrorPage = () => (
+const thankYou = () => (
   <Layout>
     <Message
-      title="404"
-      message="This page is no longer available or it has moved"
+      title="Thank you"
+      message="Your form submission has been received"
     />
   </Layout>
 );
 
-export default ErrorPage;
+export default thankYou;

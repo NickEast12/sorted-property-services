@@ -155,7 +155,7 @@ const WhatWeDoPage = ({ pageContext }) => (
   <Layout>
     <Bread breaddata={pageContext.breadcrumb} />
     <WWDStyles>
-      <PageHeader title="What we do" />
+      <PageHeader title="What we do" img="background2.png" />
       <div className="wwd__content">
         <h2>
           <span>Sorted </span>offers a wide range of services, establishing a

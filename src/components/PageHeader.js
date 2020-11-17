@@ -74,20 +74,17 @@ const PageHeaderStyles = styled.div`
   }
 `;
 
-const PageHeader = ({ title }) => {
-  console.log('header');
-  return (
-    <PageHeaderStyles>
-      <div className="header-wrap">
-        <div className="header__content">
-          <h1>{title}</h1>
-        </div>
-        <div className="header__img">
-          <Image alt="Property Services" filename="background2.png" />
-        </div>
+const PageHeader = ({ title, img }) => (
+  <PageHeaderStyles>
+    <div className="header-wrap">
+      <div className="header__content">
+        <h1>{title}</h1>
       </div>
-    </PageHeaderStyles>
-  );
-};
+      <div className="header__img">
+        <Image alt="Property Services" filename={img} />
+      </div>
+    </div>
+  </PageHeaderStyles>
+);
 
 export default PageHeader;
