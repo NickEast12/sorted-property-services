@@ -272,7 +272,7 @@ const contact = ({ pageContext }) => (
               action="/thank-you"
             >
               <div className="form-input">
-                <input type="hidden" name="Contact" value="contact" />
+                <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                   <label>
                     Don’t fill this out if you're human:{' '}
@@ -282,17 +282,17 @@ const contact = ({ pageContext }) => (
                 <label htmlFor="Name">
                   Name <span>*</span>
                 </label>
-                <input type="text" name="name" required />
+                <input type="text" name="name" id="name" required />
                 <label htmlFor="Company Name">
                   Company Name <span>*</span>
                 </label>
-                <input type="text" name="company" required />
+                <input type="text" name="company" id="company" required />
               </div>
               <div className="form-input">
                 <label htmlFor="Company Name">
                   Email Address <span>*</span>
                 </label>
-                <input type="email" name="email" required />
+                <input type="email" name="email" id="email" required />
                 <label htmlFor="Company Name">
                   Phone Number <span>*</span>
                 </label>
@@ -303,7 +303,7 @@ const contact = ({ pageContext }) => (
                   {' '}
                   Message <span>*</span>
                 </label>
-                <textarea name="message" required />
+                <textarea name="message" id="message" required />
               </div>
               <div className="form-btn">
                 <button type="submit">Submit</button>
