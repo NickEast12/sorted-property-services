@@ -296,13 +296,7 @@ const contact = ({ pageContext }) => (
                   </label>
                   <label htmlFor="Company Name">
                     Phone Number <span>*</span>
-                    <input
-                      type="tel"
-                      name="phone"
-                      pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
-                      id="phone"
-                      required
-                    />
+                    <input type="tel" name="phone" id="phone" required />
                   </label>
                 </div>
                 <div className="form-textarea">
