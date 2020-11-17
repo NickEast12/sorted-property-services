@@ -55,7 +55,7 @@ const ContactStyles = styled.div`
       }
       .form__wrapper {
         padding: 2rem 0;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
 
         h2 {
@@ -67,59 +67,57 @@ const ContactStyles = styled.div`
           .hidden {
             display: none;
           }
-          width: 90%;
+          width: 100%;
           margin: 0 auto;
-          fieldset {
-            padding: 0;
-            margin: 0;
-            border: none;
-            .form-input {
+          padding: 0;
+          margin: 0;
+          border: none;
+          .form-input {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            label {
+              color: var(--black);
+
+              & > span {
+                color: red;
+              }
+            }
+            input {
               width: 100%;
-              margin: 1.5rem 0;
+              margin: 0.5rem 0;
+              padding: 0.25rem 0;
+              background: var(--altBackground);
+              border: none;
+              border-radius: 0 !important;
+              border-bottom: solid 2px var(--altColour);
+              & > input:focus {
+                outline: none;
+              }
+            }
+          }
+          .form-textarea {
+            label {
+              color: var(--black);
+
+              & > span {
+                color: red;
+              }
+            }
+            textarea {
+              background: var(--altColour);
+              color: var(--altBackground);
+              width: 100%;
+              margin-top: 0.85rem;
+              border: solid 1px var(--altBackgroud);
               border-radius: 4px;
-              label {
-                color: var(--black);
-
-                & > span {
-                  color: red;
-                }
-                & input {
-                  width: 100%;
-                  margin: 0.5rem 0;
-                  padding: 0.25rem 0;
-                  background: var(--altBackground);
-                  border: none;
-                  border-radius: 0 !important;
-                  border-bottom: solid 2px var(--altColour);
-                  & > input:focus {
-                    outline: none;
-                  }
-                }
-              }
+              padding: 0.75rem 0.5rem;
+              resize: none;
+              height: 10rem;
             }
-            .form-textarea {
-              label {
-                color: var(--black);
-
-                & > span {
-                  color: red;
-                }
-                textarea {
-                  background: var(--altColour);
-                  color: var(--altBackground);
-                  width: 100%;
-                  margin-top: 0.85rem;
-                  border: solid 1px var(--altBackgroud);
-                  border-radius: 4px;
-                  padding: 0.75rem 0.5rem;
-                  resize: none;
-                  height: 10rem;
-                }
-              }
-            }
-            .form-btn {
-              margin-top: 1rem;
-            }
+          }
+          .form-btn {
+            margin-top: 1rem;
           }
         }
       }
@@ -273,44 +271,42 @@ const contact = ({ pageContext }) => (
               data-netlify-honeypot="bot-field"
               action="/thank-you"
             >
-              <fieldset>
-                <div className="form-input">
-                  <p className="hidden">
-                    <label>
-                      Don’t fill this out if you're human:{' '}
-                      <input name="bot-field" />
-                    </label>
-                  </p>
-                  <label htmlFor="Name">
-                    Name <span>*</span>
-                    <input type="text" name="name" required />
+              <div className="form-input">
+                <p className="hidden">
+                  <label>
+                    Don’t fill this out if you're human:{' '}
+                    <input name="bot-field" />
                   </label>
-                  <label htmlFor="Company Name">
-                    Company Name <span>*</span>
-                    <input type="text" name="company name" required />
-                  </label>
-                </div>
-                <div className="form-input">
-                  <label htmlFor="Company Name">
-                    Email Address <span>*</span>
-                    <input type="email" name="email address" required />
-                  </label>
-                  <label htmlFor="Company Name">
-                    Phone Number <span>*</span>
-                    <input type="tel" name="phone" id="phone" required />
-                  </label>
-                </div>
-                <div className="form-textarea">
-                  <label htmlFor="message">
-                    {' '}
-                    Message <span>*</span>
-                    <textarea name="message" required />
-                  </label>
-                </div>
-                <div className="form-btn">
-                  <button type="submit">Submit</button>
-                </div>
-              </fieldset>
+                </p>
+                <label htmlFor="Name">
+                  Name <span>*</span>
+                </label>
+                <input type="text" name="name" required />
+                <label htmlFor="Company Name">
+                  Company Name <span>*</span>
+                </label>
+                <input type="text" name="company" required />
+              </div>
+              <div className="form-input">
+                <label htmlFor="Company Name">
+                  Email Address <span>*</span>
+                </label>
+                <input type="email" name="email" required />
+                <label htmlFor="Company Name">
+                  Phone Number <span>*</span>
+                </label>
+                <input type="tel" name="phone" id="phone" required />
+              </div>
+              <div className="form-textarea">
+                <label htmlFor="message">
+                  {' '}
+                  Message <span>*</span>
+                </label>
+                <textarea name="message" required />
+              </div>
+              <div className="form-btn">
+                <button type="submit">Submit</button>
+              </div>
             </form>
           </div>
         </section>
