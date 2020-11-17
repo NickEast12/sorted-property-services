@@ -272,6 +272,7 @@ const contact = ({ pageContext }) => (
               action="/thank-you"
             >
               <div className="form-input">
+                <input type="hidden" name="Contact" value="contact" />
                 <p className="hidden">
                   <label>
                     Don’t fill this out if you're human:{' '}
