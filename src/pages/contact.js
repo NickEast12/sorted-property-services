@@ -269,10 +269,9 @@ const contact = ({ pageContext }) => (
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              action="/thank-you"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <div className="form-input">
-                <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                   <label>
                     Don’t fill this out if you're human:{' '}
