@@ -269,7 +269,8 @@ const contact = ({ pageContext }) => (
             <form
               name="Contact"
               method="POST"
-              data-netlify="true"
+              netlify
+              action="/thank-you"
               netlify-honeypot="bot-field"
             >
               <fieldset>
@@ -307,7 +308,7 @@ const contact = ({ pageContext }) => (
                   </label>
                 </div>
                 <div className="form-btn">
-                  <button type="button">Submit</button>
+                  <button type="submit">Submit</button>
                 </div>
               </fieldset>
             </form>
