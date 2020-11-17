@@ -268,10 +268,10 @@ const contact = ({ pageContext }) => (
             <h2>Or fill out this form </h2>
             <form
               name="Contact"
-              method="POST"
-              netlify
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               action="/thank-you"
-              netlify-honeypot="bot-field"
             >
               <fieldset>
                 <div className="form-input">
