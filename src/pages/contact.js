@@ -270,43 +270,16 @@ const contact = ({ pageContext }) => (
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <div className="form-input">
-                <p className="hidden">
-                  <label>
-                    Don’t fill this out if you're human:{' '}
-                    <input name="bot-field" />
-                  </label>
-                </p>
-                <label htmlFor="Name">
-                  Name <span>*</span>
-                </label>
-                <input type="text" name="name" id="name" required />
-                <label htmlFor="Company Name">
-                  Company Name <span>*</span>
-                </label>
-                <input type="text" name="company" id="company" required />
+              <input type="hidden" name="form-name" value="other" />
+              <div>
+                <input type="text" name="name" placeholder="Name" />
+                <input type="text" name="company" placeholder="Company name" />
               </div>
-              <div className="form-input">
-                <label htmlFor="Company Name">
-                  Email Address <span>*</span>
-                </label>
-                <input type="email" name="email" id="email" required />
-                <label htmlFor="Company Name">
-                  Phone Number <span>*</span>
-                </label>
-                <input type="tel" name="phone" id="phone" required />
+              <div>
+                <input type="email" name="email" placeholder="Email" />
+                <input type="tel" name="tel" placeholder="Telephone" />
               </div>
-              <div className="form-textarea">
-                <label htmlFor="message">
-                  {' '}
-                  Message <span>*</span>
-                </label>
-                <textarea name="message" id="message" required />
-              </div>
-              <div className="form-btn">
-                <button type="submit">Submit</button>
-              </div>
+              <button type="submit">Submit</button>
             </form>
           </div>
         </section>
