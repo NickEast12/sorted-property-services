@@ -183,7 +183,7 @@ const ContactStyles = styled.div`
 
 const contact = ({ pageContext }) => (
   <Layout>
-    <SEO title="Contact" />
+    <SEO title="Contact - Sorted Property Services" />
     <Bread breaddata={pageContext.breadcrumb} />
     <ContactStyles>
       <div className="contact__map">

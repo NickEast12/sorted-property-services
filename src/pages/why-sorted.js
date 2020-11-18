@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import CTA from '../components/CTA';
 import Bread from '../components/Breadcrums';
+import SEO from '../components/SEO';
 
 const WhySortedStyles = styled.div`
   @media only screen and (min-width: 100px) {
@@ -107,6 +108,7 @@ const WhySortedStyles = styled.div`
 
 const WhySortedPage = ({ pageContext }) => (
   <Layout>
+    <SEO title="Why Sorted? - Sorted Property Services" />
     <Bread breaddata={pageContext.breadcrumb} />
     <WhySortedStyles>
       <PageHeader title="Why Sorted?" img="why-sorted.png" />

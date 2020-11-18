@@ -5,6 +5,7 @@ import CTA from '../components/CTA';
 import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import PageServices from '../components/PageServices';
+import SEO from '../components/SEO';
 
 const ElectricalArray = [
   'EICR (Electrical Inspection Condition Report)',
@@ -153,6 +154,7 @@ const WWDStyles = styled.div`
 
 const WhatWeDoPage = ({ pageContext }) => (
   <Layout>
+    <SEO title="What we do - Sorted Property Services" />
     <Bread breaddata={pageContext.breadcrumb} />
     <WWDStyles>
       <PageHeader title="What we do" img="background2.png" />

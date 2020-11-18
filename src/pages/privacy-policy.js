@@ -2,9 +2,11 @@ import { Link } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
 import Legal from '../components/Legal';
+import SEO from '../components/SEO';
 
 const PrivacyPolicy = () => (
   <Layout>
+    <SEO title="Privacy Policy - Sorted Property Services" />
     <Legal title="Privacy Policy">
       <p>
         We are committed to protecting your privacy and maintaining the security

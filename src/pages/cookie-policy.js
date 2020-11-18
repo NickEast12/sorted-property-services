@@ -2,9 +2,11 @@ import { Link } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
 import Legal from '../components/Legal';
+import SEO from '../components/SEO';
 
 const PrivacyPolicy = () => (
   <Layout>
+    <SEO title="Cookie Policy - Sorted Property Services" />
     <Legal title="Cookie Policy">
       <p>
         Last updated:<span> November 2019</span>

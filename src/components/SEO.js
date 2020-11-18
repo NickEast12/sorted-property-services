@@ -3,14 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 
-export default function SEO({
-  children,
-  location,
-  description,
-  title,
-  image,
-  page,
-}) {
+export default function SEO({ children, location, description, title, image }) {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(graphql`
     query {
@@ -31,7 +24,7 @@ export default function SEO({
       <html lang="en" />
       <title>{title}</title>
       <link rel="canonical" href={`${site.siteMetadata.siteUrl}${pathname}`} />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" href="/favicon.png" />
       <link rel="alternate icon" href="/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
