@@ -221,6 +221,12 @@ const Footer = () => (
           <Link to="/contact">
             <li>Contact</li>
           </Link>
+          <Link to="/privacy-policy">
+            <li>Privacy Policy</li>
+          </Link>
+          <Link to="/cookie-policy">
+            <li>Cookie Policy</li>
+          </Link>
         </ul>
       </div>
       <div className="footer__social">

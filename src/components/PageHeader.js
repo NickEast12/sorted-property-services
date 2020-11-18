@@ -15,7 +15,8 @@ const PageHeaderStyles = styled.div`
       }
     }
     .header__img {
-      width: 80%;
+      width: 100%;
+
       margin: 0 auto;
       position: relative;
       img {

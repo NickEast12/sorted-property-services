@@ -1,39 +1,60 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import { useLocation } from '@reach/router';
 
-export default function SEO({ children, location, description, title, image }) {
+export default function SEO({
+  children,
+  location,
+  description,
+  title,
+  image,
+  page,
+}) {
+  const { pathname } = useLocation();
   const { site } = useStaticQuery(graphql`
-    query SEOquery {
+    query {
       site {
         siteMetadata {
           title
           description
           twitter
+          siteUrl
+          image
         }
       }
     }
   `);
-  console.log(site);
+
   return (
-    <Helmet titleTemplate={`%s - ${site.siteMetadata.title}`}>
+    <Helmet>
       <html lang="en" />
       <title>{title}</title>
-      {/* //TODO add favion when you've made one */}
-      {/* <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="alternate icon" href="/favicon.ico" /> */}
+      <link rel="canonical" href={`${site.siteMetadata.siteUrl}${pathname}`} />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="alternate icon" href="/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
       <meta name="description" content={site.siteMetadata.description} />
-      {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image || '/logo.svg'} />
-      <meta property="og:title" content={title} key="ogtitle" />
+
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={site.siteMetadata.description} />
+      <meta property="og:image" content={site.siteMetadata.image} />
       <meta
-        propery="og:site_name"
-        content={site.siteMetadata.title}
-        key="ogsitename"
+        property="og:url"
+        content={`${site.siteMetadata.siteUrl}${pathname}`}
       />
-      <meta property="og:description" content={description} key="ogdesc" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={site.siteMetadata.twitter} />
+      <meta name="twitter:title" content={title} />
+      <meta
+        name="twitter:description"
+        content={site.siteMetadata.description}
+      />
+      <meta name="twitter:image" content={site.siteMetadata.image} />
     </Helmet>
   );
 }
+
+// titleTemplate={`%s - ${site.siteMetadata.title}`}

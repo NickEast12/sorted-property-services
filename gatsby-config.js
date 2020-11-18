@@ -5,9 +5,11 @@ const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: `Sorted Property Services`,
-    siteUrl: `https://wwww.nick-east.com`,
+    siteUrl: `https://www.sortedpropertyservices.co.uk`,
     description: `fill this in later`,
     twitter: `@comebacktothis`,
+    facebook: `facebook`,
+    linkedin: 'linkedin',
     image: `/favicon.png`,
   },
   plugins: [
@@ -52,8 +54,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.sorted.co.uk/',
-        sitemap: 'https://www.sorted.com/sitemap.xml',
+        host: 'https://www.sortedpropertyservices.co.uk',
+        sitemap: 'https://www.sortedpropertyservices.co.uk/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
@@ -61,7 +63,7 @@ module.exports = {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.
-        color: `#e1000`,
+        color: `#ffffff`,
         // Disable the loading spinner.
         showSpinner: true,
       },

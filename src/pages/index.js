@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import ClientCards from '../components/ClientCards';
@@ -103,11 +103,12 @@ const BodyStyles = styled.div`
   }
 `;
 
-const index = () => {
-  const i = 'help';
+const index = ({ data }) => {
+  const tags = data.site.siteMetadata;
+  console.log(tags);
   return (
     <Layout>
-      <SEO />
+      <SEO title={tags.title} />
       <MainHeader />
       <BodyStyles>
         <div className="cards__wrapper">
@@ -145,16 +146,20 @@ const MainHeaderStyles = styled.div`
     position: relative;
     background: var(--mainColour);
     .title {
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
       text-align: center;
       &__content {
         padding: 1rem 0;
+
+        width: 90%;
+        margin: 0 auto;
         span {
           color: var(--altColour);
         }
       }
       &__img {
+        padding: 0;
         .gatsby-image-wrapper {
           width: 100%;
           object-fit: center !important;
@@ -194,7 +199,7 @@ const MainHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 768px) {
-    height: 89vh;
+    height: 88.5vh;
     .title {
       padding-top: 5rem;
       &__content {
@@ -207,7 +212,7 @@ const MainHeaderStyles = styled.div`
       }
       &__img {
         margin: 0 auto;
-        width: 60%;
+        width: 80%;
         .gatsby-image-wrapper {
           width: 100%;
           object-fit: center !important;
@@ -217,23 +222,39 @@ const MainHeaderStyles = styled.div`
       }
       &__btn {
         button {
-          width: 20%;
+          width: 30%;
           font-size: 1.2rem;
         }
       }
     }
   }
   @media only screen and (min-width: 1024px) {
-    height: 92vh;
+    height: 91.5vh;
+    padding-top: 2rem;
   }
   @media only screen and (min-width: 1280px) {
     height: 86vh;
+    padding-top: 0;
     .title {
+      position: relative;
       padding-top: 2.5rem;
       &__content {
+        margin: 7.5rem 0 0 0;
+        width: 50%;
       }
       &__img {
-        width: 55%;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: calc(0% + 5rem);
+      }
+      &__btn {
+        margin: 0;
+        width: 50%;
+        button {
+          margin: 1rem 0 0 0;
+          width: 40%;
+        }
       }
     }
   }
@@ -596,3 +617,17 @@ const Accreditations = () => (
 );
 
 export default index;
+
+export const query = graphql`
+  query Tags {
+    site {
+      siteMetadata {
+        title
+        description
+        twitter
+        siteUrl
+        image
+      }
+    }
+  }
+`;

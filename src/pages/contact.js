@@ -6,6 +6,7 @@ import Address from '../svgs/pin.svg';
 import Phone from '../svgs/phone.svg';
 import Email from '../svgs/email.svg';
 import Bread from '../components/Breadcrums';
+import SEO from '../components/SEO';
 
 const ContactStyles = styled.div`
   @media only screen and (min-width: 100px) {
@@ -182,6 +183,7 @@ const ContactStyles = styled.div`
 
 const contact = ({ pageContext }) => (
   <Layout>
+    <SEO title="Contact" />
     <Bread breaddata={pageContext.breadcrumb} />
     <ContactStyles>
       <div className="contact__map">
