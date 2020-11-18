@@ -5,7 +5,7 @@ import Arrow from '../svgs/arrow.svg';
 
 const MessageStyles = styled.div`
   @media only screen and (min-width: 100px) {
-    position: absolute;
+    position: fixed;
     background: var(--altColour);
     top: 0;
     left: 0;

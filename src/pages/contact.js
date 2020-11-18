@@ -57,67 +57,31 @@ const ContactStyles = styled.div`
         padding: 2rem 0;
         width: 80%;
         margin: 0 auto;
-
         h2 {
           color: var(--altColour);
           text-align: center;
           margin-bottom: 1rem;
         }
         form {
-          .hidden {
-            display: none;
-          }
-          width: 100%;
-          margin: 0 auto;
-          padding: 0;
-          margin: 0;
-          border: none;
-          .form-input {
+          input {
             width: 100%;
-            margin: 1.5rem 0;
-            border-radius: 4px;
-            label {
-              color: var(--black);
-
-              & > span {
-                color: red;
-              }
-            }
-            input {
-              width: 100%;
-              margin: 0.5rem 0;
-              padding: 0.25rem 0;
-              background: var(--altBackground);
-              border: none;
-              border-radius: 0 !important;
-              border-bottom: solid 2px var(--altColour);
-              & > input:focus {
-                outline: none;
-              }
-            }
+            padding: 0.5rem 0.35rem;
+            border-radius: 4.5px;
+            border: none;
+            margin-bottom: 1rem;
           }
-          .form-textarea {
-            label {
-              color: var(--black);
-
-              & > span {
-                color: red;
-              }
-            }
-            textarea {
-              background: var(--altColour);
-              color: var(--altBackground);
-              width: 100%;
-              margin-top: 0.85rem;
-              border: solid 1px var(--altBackgroud);
-              border-radius: 4px;
-              padding: 0.75rem 0.5rem;
-              resize: none;
-              height: 10rem;
-            }
+          textarea {
+            resize: none;
+            width: 100%;
+            background: var(--altColour);
+            border: none;
+            border-radius: 4.5px;
+            color: var(--white);
+            padding: 0.5rem 0.35rem;
+            height: 10rem;
+            margin-bottom: 1rem;
           }
-          .form-btn {
-            margin-top: 1rem;
+          div {
           }
         }
       }
@@ -186,12 +150,10 @@ const ContactStyles = styled.div`
         form {
           margin: 0 auto 0 0;
           width: 100%;
-          .form-input {
-            display: flex;
-            gap: 1rem;
-            input {
-              width: 50%;
-            }
+          div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
           }
         }
       }
@@ -279,14 +241,24 @@ const contact = ({ pageContext }) => (
                 </label>
               </p>
               <div>
-                <input type="text" name="name" placeholder="Name" />
-                <input type="text" name="company" placeholder="Company name" />
+                <input type="text" name="name" placeholder="Name" required />
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company name"
+                  required
+                />
               </div>
               <div>
-                <input type="email" name="email" placeholder="Email" />
-                <input type="tel" name="tel" placeholder="Telephone" />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="tel" name="tel" placeholder="Telephone" required />
               </div>
-              <textarea name="message" id="message" placeholder="Message" />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+                required
+              />
               <button type="submit">Submit</button>
             </form>
           </div>
