@@ -90,8 +90,8 @@ const WWDStyles = styled.div`
           right: 0;
           height: 100%;
           .gatsby-image-wrapper {
-            height: 100% !important;
-            width: 100% !important;
+            height: 100%;
+            width: 65%;
           }
         }
         .ps-content {
@@ -110,8 +110,8 @@ const WWDStyles = styled.div`
           left: 0;
           height: 100%;
           .gatsby-image-wrapper {
-            height: 100% !important;
-            width: 100% !important;
+            height: 100%;
+            width: 70%;
           }
         }
         .ps-content {
@@ -184,7 +184,7 @@ const WhatWeDoPage = ({ pageContext }) => (
         <PageServices
           id="electrical"
           imgAlt="Electrical Works"
-          img="placeholder.png"
+          img="electrical-white.png"
           title="Electrical"
           intro="Safety is paramount to us at Sorted and we offer a full range of electrical facilities, including:"
           list={ElectricalArray}
@@ -192,7 +192,7 @@ const WhatWeDoPage = ({ pageContext }) => (
         <PageServices
           id="gasandplumbing"
           imgAlt="Gas &amp; Plumbing"
-          img="plumbing-stock.png"
+          img="gas-white.png"
           title="Gas &amp; Plumbing"
           intro="Carried out by gas safe registered engineers, our gas &amp; plumbing services include:"
           list={GasArray}
@@ -200,7 +200,7 @@ const WhatWeDoPage = ({ pageContext }) => (
         <PageServices
           id="multi-trade"
           imgAlt="Multi-trade"
-          img="trade-stock.png"
+          img="multi-white.png"
           title="Multi-trade"
           intro="At Sorted, we have a skilled professional to cover any type of job, including:"
           list={TradeArray}

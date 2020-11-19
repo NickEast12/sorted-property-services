@@ -24,6 +24,11 @@ const PageHeaderStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 500px) {
+    .header__img {
+      width: 80%;
+    }
+  }
   @media only screen and (min-width: 768px) {
     position: relative;
     padding: 6rem 0;
@@ -33,12 +38,31 @@ const PageHeaderStyles = styled.div`
       margin: 0 auto;
     }
     .header__img {
-      width: 50%;
+      width: 45%;
       top: 0.5rem;
       right: 5rem;
       position: absolute;
     }
   }
+  @media only screen and (min-width: 850px) {
+    padding: 7rem 0;
+    .header__img {
+      width: 45%;
+    }
+  }
+  @media only screen and (min-width: 978px) {
+    padding: 7rem 0;
+    .header__img {
+      width: 45%;
+    }
+  }
+  @media only screen and (min-width: 1100px) {
+    padding: 8rem 0;
+    .header__img {
+      width: 40%;
+    }
+  }
+
   @media only screen and (min-width: 1024px) {
     .header__content {
       text-align: left;

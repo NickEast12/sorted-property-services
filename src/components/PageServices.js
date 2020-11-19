@@ -14,8 +14,11 @@ const PageServicesStyles = styled.section`
       0 100px 80px rgba(0, 0, 0, 0.12);
     .ps-img {
       width: 100%;
+      background: var(--mainColour);
       height: 10rem;
       .gatsby-image-wrapper {
+        width: 75%;
+        margin: 0 auto;
         height: 10rem;
         border-radius: 2px;
       }
@@ -48,6 +51,14 @@ const PageServicesStyles = styled.section`
       padding: 2rem 1rem;
     }
   }
+  @media only screen and (min-width: 414px) {
+    .ps-img {
+      .gatsby-image-wrapper {
+        width: 65%;
+      }
+    }
+  }
+
   @media only screen and (min-width: 1280px) {
     .ps-content {
       h3 {
@@ -66,27 +77,24 @@ const PageServicesStyles = styled.section`
   }
 `;
 
-const PageServices = ({ id, imgAlt, img, title, intro, list }) => {
-  console.log(list);
-  return (
-    <PageServicesStyles id={id}>
-      <div className="ps-img">
-        <Image alt={imgAlt} filename={img} />
-      </div>
-      <div className="ps-content">
-        <h3 className="underline-white">{title}</h3>
-        <h5>{intro}</h5>
-        <ul>
-          {list.map((items) => (
-            <li key={items}>
-              <span> - </span>
-              {items}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </PageServicesStyles>
-  );
-};
+const PageServices = ({ id, imgAlt, img, title, intro, list }) => (
+  <PageServicesStyles id={id}>
+    <div className="ps-img">
+      <Image alt={imgAlt} filename={img} />
+    </div>
+    <div className="ps-content">
+      <h3 className="underline-white">{title}</h3>
+      <h5>{intro}</h5>
+      <ul>
+        {list.map((items) => (
+          <li key={items}>
+            <span> - </span>
+            {items}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </PageServicesStyles>
+);
 
 export default PageServices;

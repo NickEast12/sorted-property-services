@@ -6,6 +6,7 @@ import Typography from '../styles/Typography';
 import Nav from './Nav';
 import Footer from './Footer';
 import Cookie from './Cookie';
+import Accreditations from './Accreditations';
 
 const PageBody = styled.main`
   /* background: var(--altColour); */
@@ -19,6 +20,7 @@ const Layout = ({ children }) => (
       <Nav />
       <Cookie />
       {children}
+      <Accreditations />
       <Footer />
     </PageBody>
   </>
