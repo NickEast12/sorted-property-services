@@ -232,7 +232,7 @@ const MainHeaderStyles = styled.div`
     padding-top: 0;
     .title {
       position: relative;
-      padding-top: 2.5rem;
+      padding-top: 4.5rem;
       &__content {
         margin: 7.5rem 0 0 0;
         width: 50%;
@@ -241,7 +241,7 @@ const MainHeaderStyles = styled.div`
         width: 50%;
         position: absolute;
         right: 0;
-        top: calc(0% + 5rem);
+        top: calc(0% + 6.85rem);
       }
       &__btn {
         margin: 0;
@@ -324,7 +324,7 @@ const WhatSetsUsApartStyles = styled.div`
     .why-us {
       padding: 3.5rem 0;
       ul {
-        width: 60%;
+        width: 90%;
       }
     }
   }
@@ -345,7 +345,7 @@ const WhatSetsUsApartStyles = styled.div`
   }
   @media only screen and (min-width: 1280px) {
     .why-us {
-      width: 60%;
+      width: 50%;
       max-width: var(--maxWidth);
 
       h2 {
@@ -375,16 +375,16 @@ const WhatSetsUsApart = () => (
         </p>
         <ul>
           <li>
-            <Icon /> Point 1
+            <Icon /> Quality control
           </li>
           <li>
-            <Icon /> Point 2
+            <Icon /> Seamless communication
           </li>
           <li>
-            <Icon /> Point 3
+            <Icon /> Fast turnarounds
           </li>
           <li>
-            <Icon /> Point 4
+            <Icon /> Manage high volume
           </li>
         </ul>
       </div>

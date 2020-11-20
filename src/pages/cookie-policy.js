@@ -9,7 +9,7 @@ const PrivacyPolicy = () => (
     <SEO title="Cookie Policy - Sorted Property Services" />
     <Legal title="Cookie Policy">
       <p>
-        Last updated:<span> November 2019</span>
+        Last updated:<span> November 2020</span>
       </p>
 
       <div>

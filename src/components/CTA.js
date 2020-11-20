@@ -55,7 +55,7 @@ const CTA = () => (
         We’re here 24/7 and ready to help. Any questions, just call
         <span> 020 3962 5050 </span>.
       </p>
-      <Link to="/">
+      <Link to="/contact">
         <button type="button">Contact us now</button>
       </Link>
     </div>
