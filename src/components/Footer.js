@@ -237,7 +237,7 @@ const Footer = () => (
               <span>
                 <Email />
               </span>
-              - workorders@sortedpropertyservices.co.uk
+              workorders@sortedpropertyservices.co.uk
             </li>
           </Link>
           <Link to="/">
@@ -245,7 +245,7 @@ const Footer = () => (
               <span>
                 <Phone />
               </span>
-              - 020 3962 5050
+              020 3962 5050
             </li>
           </Link>
           <Link to="/">
@@ -253,7 +253,7 @@ const Footer = () => (
               <span>
                 <Address />
               </span>
-              - Unit 1 Ensign House, Rope Street, London SE16 7EX
+              Unit 1 Ensign House, Rope Street, London SE16 7EX
             </li>
           </Link>
         </ul>

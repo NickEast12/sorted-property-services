@@ -126,7 +126,7 @@ const AccreditationsStyles = styled.div`
 const Accreditations = () => (
   <AccreditationsStyles>
     <div className="acc__content">
-      <h4 className="underline-alt">Our Accreditations</h4>
+      <h4 className="underline-alt">Our accreditations</h4>
       <p>
         At Sorted, we understand the complexities involved in navigating
         ever-changing legislation, but we’re experts at helping landlords and

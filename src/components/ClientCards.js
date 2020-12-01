@@ -13,22 +13,12 @@ const CardStyles = styled.div`
     p {
       font-style: italic;
       font-weight: 600;
-      font-size: 0.85rem;
-    }
-    h4 {
-      color: var(--altColour);
-      font-size: 1.2rem;
-      margin: 1rem 0 0.5rem 0;
-    }
-    h5 {
-      color: var(--mainColour);
-      font-weight: 500;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
   @media only screen and (min-width: 375px) {
     p {
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
   }
   @media only screen and (min-width: 414px) {
@@ -39,13 +29,13 @@ const CardStyles = styled.div`
   @media only screen and (min-width: 768px) {
   }
   @media only screen and (min-width: 1024px) {
-    padding: 2.5rem 2rem 1rem 2rem;
+    /* padding: 2.5rem 2rem 1rem 2rem; */
   }
   @media only screen and (min-width: 1280px) {
-    padding: 1.5rem 2rem 1rem 2rem;
+    /* padding: 1.5rem 2rem 1rem 2rem; */
   }
   @media only screen and (min-width: 1440px) {
-    padding: 2.5rem 2rem 1rem 2rem;
+    /* padding: 2.5rem 2rem 1rem 2rem; */
   }
 `;
 
@@ -150,7 +140,6 @@ const ClientCards = () => {
           little girl’s radiator working. It’s lovely to have somebody who wants
           to help.”
         </p>
-        <h4>Joe Bloggs</h4>
       </CardStyles>
       <CardStyles>
         <p>
@@ -158,7 +147,6 @@ const ClientCards = () => {
           flat – repairing a bathroom extractor that wasn’t working. The workman
           was very kind and the extractor was properly fixed."
         </p>
-        <h4>Joe Bloggs</h4>
       </CardStyles>
       <CardStyles>
         <p>
@@ -166,14 +154,12 @@ const ClientCards = () => {
           engineer did today and last week on my apartment. He was very
           efficient, polite and a pleasure to work with.”
         </p>
-        <h4>Joe Bloggs</h4>
       </CardStyles>
       <CardStyles>
         <p>
           “I recently had Steven over to paint my bathroom ceiling, where there
           had been visible water damage. He went above and beyond!”
         </p>
-        <h4>Joe Bloggs</h4>
       </CardStyles>
     </Slider>
   );

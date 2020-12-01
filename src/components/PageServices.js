@@ -60,6 +60,9 @@ const PageServicesStyles = styled.section`
   }
 
   @media only screen and (min-width: 1280px) {
+    width: 100%;
+    margin-bottom: 3rem;
+
     .ps-content {
       h3 {
         font-size: 1.6rem;

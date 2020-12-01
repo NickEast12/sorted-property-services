@@ -208,13 +208,15 @@ const contact = ({ pageContext }) => (
                 <span>
                   <Phone />
                 </span>
-                020 3962 5050
+                <a href="tel:020 3962 5050">020 3962 5050</a>
               </li>
               <li className="mob">
                 <span>
                   <Email />
                 </span>
-                workorders@sortedpropertyservices.co.uk
+                <a href="mailto:workorders@sortedpropertyservices.co.uk">
+                  workorders@sortedpropertyservices.co.uk
+                </a>
               </li>
               <li className="desk">
                 <span>

@@ -147,7 +147,14 @@ const WWDStyles = styled.div`
       }
     }
     .wwd__cards {
-      width: 100%;
+      width: 80%;
+      section:nth-child(odd) {
+        .ps-img {
+          .gatsby-image-wrapper {
+            width: 62%;
+          }
+        }
+      }
     }
   }
 `;

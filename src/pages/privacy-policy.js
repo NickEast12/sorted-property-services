@@ -52,7 +52,7 @@ const PrivacyPolicy = () => (
             place.
           </p>
           <div>
-            <h2>3. Social Media Profiles</h2>
+            <h2>3. Social media profiles</h2>
             <p>
               We may use official profiles on social media channels. We advise
               our users to verify the legitimacy of any profile pertaining to be
@@ -67,7 +67,7 @@ const PrivacyPolicy = () => (
             </p>
           </div>
           <div>
-            <h2>4. External Web Links</h2>
+            <h2>4. External web links</h2>
             <p>
               This website contains links to external websites. We are not
               responsible for the privacy practices or the content on these
@@ -78,7 +78,7 @@ const PrivacyPolicy = () => (
             </p>
           </div>
           <div>
-            <h2>5. SPAM Policy</h2>
+            <h2>5. SPAM policy</h2>
             <p>
               We are strongly against spam. We only contact our customers when
               they have requested to receive communication or there is a need to

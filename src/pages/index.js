@@ -6,7 +6,10 @@ import Image from '../components/Image';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ServicesCard from '../components/ServicesCard';
-import Icon from '../svgs/email.svg';
+import BestInClassIcon from '../svgs/quality.svg';
+import SeamlessCommunicationIcon from '../svgs/conversation.svg';
+import FastTunraroundIcon from '../svgs/dashboard.svg';
+import ExportWorkmasship from '../svgs/medal.svg';
 
 const BodyStyles = styled.div`
   @media only screen and (min-width: 100px) {
@@ -375,16 +378,16 @@ const WhatSetsUsApart = () => (
         </p>
         <ul>
           <li>
-            <Icon /> Quality control
+            <BestInClassIcon /> Best-in-class service
           </li>
           <li>
-            <Icon /> Seamless communication
+            <SeamlessCommunicationIcon /> Seamless communication
           </li>
           <li>
-            <Icon /> Fast turnarounds
+            <FastTunraroundIcon /> Fast turnarounds
           </li>
           <li>
-            <Icon /> Manage high volume
+            <ExportWorkmasship /> Expert workmanship
           </li>
         </ul>
       </div>
@@ -436,10 +439,10 @@ const ClientsStyles = styled.div`
       h3 {
         font-size: 1.9rem;
       }
-      /* p {
-        font-size: 0.95rem;
+      > p {
+        font-size: 1.2rem;
         padding: 0.75rem 0;
-      } */
+      }
     }
   }
 `;

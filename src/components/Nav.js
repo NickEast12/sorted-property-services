@@ -185,7 +185,7 @@ const Nav = () => {
           <p>
             <span>COVID-19 Update: </span>
             We’ve briefed and equipped our tradespeople in response to the
-            coronavirus crisis. Read our policy.
+            coronavirus crisis.
           </p>
         </div>
       </CovidUpdateStyles>

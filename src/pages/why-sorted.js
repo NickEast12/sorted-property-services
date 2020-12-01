@@ -57,6 +57,10 @@ const WhySortedStyles = styled.div`
             font-weight: 800;
           }
         }
+        h6 {
+          color: var(--black);
+          font-size: clamp(1rem, 50vh, 1.2rem);
+        }
       }
     }
   }
@@ -115,12 +119,12 @@ const WhySortedPage = ({ pageContext }) => (
       <div className="why__wrapper">
         <h2>
           No other maintenance company has been built by property managers for
-          property managers. And with over 30 years of combined property
-          management and letting experience, Sorted has first-hand knowledge of
-          the frustrations faced by property managers. We know property
-          maintenance inside out, which not only enables us to fully understand
-          what you want, but also allows us to provide everything you need to
-          simplify the entire process.
+          property managers. And with over 30 years of experience, we have been
+          where you are today. Sorted has first-hand knowledge of the
+          frustrations faced by property managers. We know property maintenance
+          inside out, which not only enables us to fully understand what you
+          want, but also allows us to provide everything you need to simplify
+          the entire process.
         </h2>
         <p>
           We manage all aspects of your property maintenance, whether planning
@@ -157,9 +161,9 @@ const WhySortedPage = ({ pageContext }) => (
           </p>
           <p>
             Supported by a dedicated team at our head office, you can be
-            confident that every job runs smoothly. Sorted: your professional
-            solution.
+            confident that every job runs smoothly.
           </p>
+          <h6>Sorted: your professional solution.</h6>
         </div>
       </div>
     </WhySortedStyles>

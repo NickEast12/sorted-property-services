@@ -13,7 +13,7 @@ const PrivacyPolicy = () => (
       </p>
 
       <div>
-        <h2>1: What are cookies</h2>
+        <h2>1: What are cookies?</h2>
         <p>
           As is common practice with almost all professional websites this site
           uses cookies, which are tiny files that are downloaded to your
@@ -25,7 +25,7 @@ const PrivacyPolicy = () => (
         </p>
       </div>
       <div>
-        <h2>2: How We Use Cookies</h2>
+        <h2>2: How we use cookies?</h2>
         <p>
           We use cookies for a variety of reasons detailed below. Unfortunately,
           in most cases there are no industry standard options for disabling
@@ -35,7 +35,7 @@ const PrivacyPolicy = () => (
           to provide a service that you use
         </p>
         <div>
-          <h2>3. Disabling Cookies</h2>
+          <h2>3. Disabling cookies?</h2>
           <p>
             You can prevent the setting of cookies by adjusting the settings on
             your browser (see your browser Help for how to do this). Be aware
@@ -47,14 +47,14 @@ const PrivacyPolicy = () => (
           </p>
         </div>
         <div>
-          <h2>4. The Cookies We Set</h2>
+          <h2>4. The cookies we set</h2>
           <p>
             <span>Forms related cookies</span> - When you submit data to through
             a form such as those found on contact pages or comment forms cookies
             may be set to remember your user details for future correspondence
           </p>
           <p>
-            <span>Third Party Cookies</span> - In some special cases we also use
+            <span>Third party cookies</span> - In some special cases we also use
             cookies provided by trusted third parties. The following section
             details which third party cookies you might encounter through this
             site.

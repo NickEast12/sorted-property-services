@@ -43,7 +43,7 @@ const ServicesCardStyles = styled.div`
   @media only screen and (min-width: 1280px) {
     .services__content {
       &__wrapper {
-        width: 65%;
+        width: 70%;
         h2 {
           font-size: 2.25rem;
         }
