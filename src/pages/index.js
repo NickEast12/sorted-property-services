@@ -373,8 +373,7 @@ const WhatSetsUsApart = () => (
         <h2 className="underline-alt">What sets us apart</h2>
         <p>
           No other maintenance company has been built by property managers for
-          property managers. And with over 30 years of combined property
-          management.
+          property managers.
         </p>
         <ul>
           <li>

@@ -32,7 +32,7 @@ const PrivacyPolicy = () => (
           cookies without completely disabling the functionality and features
           they add to this site. It is recommended that you leave on all cookies
           if you are not sure whether you need them or not in case they are used
-          to provide a service that you use
+          to provide a service that you use.
         </p>
         <div>
           <h2>3. Disabling cookies?</h2>
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => (
             many other websites that you visit. Disabling cookies will usually
             result in also disabling certain functionality and features of the
             this site. Therefore it is recommended that you do not disable
-            cookies
+            cookies.
           </p>
         </div>
         <div>
@@ -51,7 +51,7 @@ const PrivacyPolicy = () => (
           <p>
             <span>Forms related cookies</span> - When you submit data to through
             a form such as those found on contact pages or comment forms cookies
-            may be set to remember your user details for future correspondence
+            may be set to remember your user details for future correspondence.
           </p>
           <p>
             <span>Third party cookies</span> - In some special cases we also use

@@ -304,7 +304,7 @@ const DesktopNav = () => (
           </Link>
         </li>
         <li>
-          <Link to="/why-sorted">Why sorted</Link>
+          <Link to="/why-sorted">Why Sorted</Link>
         </li>
         <li>
           <Link to="/what-we-do">What we do</Link>
