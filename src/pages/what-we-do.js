@@ -161,7 +161,10 @@ const WWDStyles = styled.div`
 
 const WhatWeDoPage = ({ pageContext }) => (
   <Layout>
-    <SEO title="What we do - Sorted Property Services" />
+    <SEO
+      title="What we do - Sorted Property Services"
+      description="Sorted offers a wide range of services, establishing a solid reputation for high quality work in the property maintenance industry. During each stage of your project, we ensure that every stakeholder is kept up to date, removing the risk of miscommunication and delays, creating minimal disruption."
+    />
     <Bread breaddata={pageContext.breadcrumb} />
     <WWDStyles>
       <PageHeader title="What we do" img="background2.png" />

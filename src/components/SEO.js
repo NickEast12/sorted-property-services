@@ -23,15 +23,15 @@ export default function SEO({ children, location, description, title, image }) {
     <Helmet>
       <html lang="en" />
       <title>{title}</title>
+      <meta name="description" content={description} />
       <link rel="canonical" href={`${site.siteMetadata.siteUrl}${pathname}`} />
       <link rel="icon" href="/favicon.png" />
       <link rel="alternate icon" href="/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
-      <meta name="description" content={site.siteMetadata.description} />
 
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={site.siteMetadata.description} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={site.siteMetadata.image} />
       <meta
         property="og:url"
@@ -41,10 +41,7 @@ export default function SEO({ children, location, description, title, image }) {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata.twitter} />
       <meta name="twitter:title" content={title} />
-      <meta
-        name="twitter:description"
-        content={site.siteMetadata.description}
-      />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={site.siteMetadata.image} />
     </Helmet>
   );

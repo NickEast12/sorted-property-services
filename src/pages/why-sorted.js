@@ -112,7 +112,10 @@ const WhySortedStyles = styled.div`
 
 const WhySortedPage = ({ pageContext }) => (
   <Layout>
-    <SEO title="Why Sorted? - Sorted Property Services" />
+    <SEO
+      title="Why Sorted? - Sorted Property Services"
+      description="No other maintenance company has been built by property managers for property managers. And with over 30 years of combined property management and letting experience, Sorted has first-hand knowledge of the frustrations faced by property managers. We know property maintenance inside out, which not only enables us to fully understand what you want, but also allows us to provide everything you need to simplify the entire process."
+    />
     <Bread breaddata={pageContext.breadcrumb} />
     <WhySortedStyles>
       <PageHeader title="Why Sorted?" img="why-sorted.png" />

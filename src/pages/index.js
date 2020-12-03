@@ -107,7 +107,10 @@ const index = ({ data }) => {
   const tags = data.site.siteMetadata;
   return (
     <Layout>
-      <SEO title={tags.title} />
+      <SEO
+        title={tags.title}
+        description="The Sorted workforce is comprised of professional and highly-skilled individuals, fully equipped and qualified to deal with your needs, wants and frustrations as a property manager. Friendly and always happy to help, each operative is accredited in their field of expertise and guaranteed to get the job done to outstanding standards in your property."
+      />
       <MainHeader />
       <BodyStyles>
         <div className="cards__wrapper">

@@ -183,7 +183,10 @@ const ContactStyles = styled.div`
 
 const contact = ({ pageContext }) => (
   <Layout>
-    <SEO title="Contact - Sorted Property Services" />
+    <SEO
+      title="Contact - Sorted Property Services"
+      description="With Sorted, you can make one call to deal with multiple trades. And if any service that you require is not listed, contact us on 020 3962 5050 as we still may be able to help. For more information on how Sorted can streamline your property maintenance work, get in touch."
+    />
     <Bread breaddata={pageContext.breadcrumb} />
     <ContactStyles>
       <div className="contact__map">
