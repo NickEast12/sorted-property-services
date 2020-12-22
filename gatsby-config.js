@@ -84,7 +84,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: '111',
+        trackingId: process.env.GOOGLE__API__KEY,
         head: true,
       },
     },
@@ -92,7 +92,7 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: '111',
+          trackingId: process.env.GOOGLE__API__KEY,
           anonymize: true,
         },
         environments: ['production', 'development'],
