@@ -25,8 +25,8 @@ export default function SEO({ children, location, description, title, image }) {
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={`${site.siteMetadata.siteUrl}${pathname}`} />
-      <link rel="icon" href="/favicon.png" />
-      <link rel="alternate icon" href="/favicon.ico" />
+      <link rel="icon" href="./assets/images/favicon.png" />
+      <link rel="alternate icon" href="./assets/images/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
 
