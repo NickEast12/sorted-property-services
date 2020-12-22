@@ -2,17 +2,28 @@ require('dotenv').config({ path: '.env' });
 
 const path = require(`path`);
 
+console.log(process.env.GATSBY_GOOGLE_API_KEY);
+
 module.exports = {
   siteMetadata: {
     title: `Sorted Property Services`,
     siteUrl: `https://www.sortedpropertyservices.co.uk`,
     description: `fill this in later`,
-    twitter: `@comebacktothis`,
+    twitter: `@`,
     facebook: `facebook`,
     linkedin: 'linkedin',
     image: `/favicon.png`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-52136219-2',
+        // this option places the tracking script into the head of the DOM
+        head: true,
+        // other options
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
@@ -81,18 +92,12 @@ module.exports = {
         trailingSlashes: false,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GATSBY_GOOGLE_API_KEY,
-        head: true,
-      },
-    },
+
     {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: process.env.GATSBY_GOOGLE_API_KEY,
+          trackingId: 'UA-52136219-2',
           anonymize: true,
         },
         environments: ['production', 'development'],
