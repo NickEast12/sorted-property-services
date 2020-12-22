@@ -58,7 +58,7 @@ const Cookie = () => (
       <p>
         This website uses cookies. By using this website you consent to our use
         of these cookies. For more information visit our
-        <Link to="/"> Privacy Policy</Link>
+        <Link to="/privacy-policy"> Privacy Policy</Link>
       </p>
     </CookieConsent>
   </CookieStyles>
