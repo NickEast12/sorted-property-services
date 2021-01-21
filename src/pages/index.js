@@ -108,7 +108,7 @@ const index = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={tags.title}
+        title="Sorted Property Services | Your one-stop shop for property managers"
         description="The Sorted workforce is comprised of professional and highly-skilled individuals, fully equipped and qualified to deal with your needs, wants and frustrations as a property manager. Friendly and always happy to help, each operative is accredited in their field of expertise and guaranteed to get the job done to outstanding standards in your property."
       />
       <MainHeader />
@@ -234,7 +234,7 @@ const MainHeaderStyles = styled.div`
     padding-top: 2rem;
   }
   @media only screen and (min-width: 1280px) {
-    height: 86vh;
+    height: 43rem;
     padding-top: 0;
     .title {
       position: relative;
@@ -260,7 +260,7 @@ const MainHeaderStyles = styled.div`
     }
   }
   @media only screen and (min-width: 1440px) {
-    height: 90vh;
+    height: 49rem;
     .title {
       max-width: var(--maxWidth);
     }

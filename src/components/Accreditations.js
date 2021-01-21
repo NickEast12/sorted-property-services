@@ -109,6 +109,7 @@ const AccreditationsStyles = styled.div`
     .acc__content {
       &__img {
         &__box {
+          margin-right: 40px;
           &:nth-child(1) {
             max-width: 200px;
           }

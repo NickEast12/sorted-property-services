@@ -164,6 +164,7 @@ const FooterStyles = styled.footer`
     .footer {
       padding: 2rem 0;
       &__links {
+        margin-right: 2rem;
         h4 {
           font-size: 1.25rem;
         }

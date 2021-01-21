@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `Sorted Property Services`,
     siteUrl: `https://www.sortedpropertyservices.co.uk`,
-    description: `fill this in later`,
+    description: `The Sorted workforce is comprised of professional and highly-skilled individuals, fully equipped and qualified to deal with your needs, wants and frustrations as a property manager. Friendly and always happy to help, each operative is accredited in their field of expertise and guaranteed to get the job done to outstanding standards in your property.`,
     twitter: `@`,
     facebook: `facebook`,
     linkedin: 'linkedin',

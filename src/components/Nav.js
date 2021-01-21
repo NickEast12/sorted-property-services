@@ -254,6 +254,9 @@ const DesktopNavStyles = styled.nav`
       ul {
         margin: 0;
         padding: 0;
+        li {
+          margin-right: 15px;
+        }
         li:hover {
           color: var(--mainColour);
         }
@@ -280,6 +283,7 @@ const DesktopNavStyles = styled.nav`
         align-items: center;
         .num {
           font-weight: 600;
+          margin-right: 20px;
         }
         button {
           font-weight: 500;

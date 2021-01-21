@@ -30,19 +30,25 @@ export default function SEO({ children, location, description, title, image }) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
 
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={site.siteMetadata.image} />
       <meta
         property="og:url"
         content={`${site.siteMetadata.siteUrl}${pathname}`}
       />
       <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content="/sorted.png" />
+
       <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="sortedpropertyservices.co.uk" />
+      <meta
+        property="twitter:url"
+        content={`${site.siteMetadata.siteUrl}${pathname}`}
+      />
       <meta name="twitter:creator" content={site.siteMetadata.twitter} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={site.siteMetadata.image} />
+      <meta name="twitter:image" content="/sorted.png" />
     </Helmet>
   );
 }
