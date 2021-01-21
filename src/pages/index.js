@@ -10,6 +10,7 @@ import BestInClassIcon from '../svgs/quality.svg';
 import SeamlessCommunicationIcon from '../svgs/conversation.svg';
 import FastTunraroundIcon from '../svgs/dashboard.svg';
 import ExportWorkmasship from '../svgs/medal.svg';
+import OGImage from '../sorted.png';
 
 const BodyStyles = styled.div`
   @media only screen and (min-width: 100px) {
@@ -109,6 +110,7 @@ const index = ({ data }) => {
     <Layout>
       <SEO
         title="Sorted Property Services | Your one-stop shop for property managers"
+        img={OGImage}
         description="The Sorted workforce is comprised of professional and highly-skilled individuals, fully equipped and qualified to deal with your needs, wants and frustrations as a property manager. Friendly and always happy to help, each operative is accredited in their field of expertise and guaranteed to get the job done to outstanding standards in your property."
       />
       <MainHeader />

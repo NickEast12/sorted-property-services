@@ -7,6 +7,7 @@ import Phone from '../svgs/phone.svg';
 import Email from '../svgs/email.svg';
 import Bread from '../components/Breadcrums';
 import SEO from '../components/SEO';
+import OGImage from '../sorted.png';
 
 const ContactStyles = styled.div`
   @media only screen and (min-width: 100px) {
@@ -185,6 +186,7 @@ const contact = ({ pageContext }) => (
   <Layout>
     <SEO
       title="Contact - Sorted Property Services"
+      img={OGImage}
       description="With Sorted, you can make one call to deal with multiple trades. And if any service that you require is not listed, contact us on 020 3962 5050 as we still may be able to help. For more information on how Sorted can streamline your property maintenance work, get in touch."
     />
     <Bread breaddata={pageContext.breadcrumb} />

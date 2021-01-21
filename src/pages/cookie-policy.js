@@ -3,10 +3,15 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Legal from '../components/Legal';
 import SEO from '../components/SEO';
+import OGImage from '../sorted.png';
 
 const PrivacyPolicy = () => (
   <Layout>
-    <SEO title="Cookie Policy - Sorted Property Services" />
+    <SEO
+      title="Cookie Policy - Sorted Property Services"
+      img={OGImage}
+      description="The Sorted workforce is comprised of professional and highly-skilled individuals, fully equipped and qualified to deal with your needs, wants and frustrations as a property manager. Friendly and always happy to help, each operative is accredited in their field of expertise and guaranteed to get the job done to outstanding standards in your property."
+    />
     <Legal title="Cookie Policy">
       <p>
         Last updated:<span> November 2020</span>

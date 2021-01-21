@@ -5,6 +5,7 @@ import PageHeader from '../components/PageHeader';
 import CTA from '../components/CTA';
 import Bread from '../components/Breadcrums';
 import SEO from '../components/SEO';
+import OGImage from '../sorted.png';
 
 const WhySortedStyles = styled.div`
   @media only screen and (min-width: 100px) {
@@ -114,6 +115,7 @@ const WhySortedPage = ({ pageContext }) => (
   <Layout>
     <SEO
       title="Why Sorted? - Sorted Property Services"
+      img={OGImage}
       description="No other maintenance company has been built by property managers for property managers. And with over 30 years of combined property management and letting experience, Sorted has first-hand knowledge of the frustrations faced by property managers. We know property maintenance inside out, which not only enables us to fully understand what you want, but also allows us to provide everything you need to simplify the entire process."
     />
     <Bread breaddata={pageContext.breadcrumb} />
