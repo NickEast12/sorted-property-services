@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import PageHeader from '../components/PageHeader';
 import PageServices from '../components/PageServices';
 import SEO from '../components/SEO';
+import OGImage from '../sorted.png';
 
 const ElectricalArray = [
   'EICR (Electrical Inspection Condition Report)',
@@ -163,6 +164,7 @@ const WhatWeDoPage = ({ pageContext }) => (
   <Layout>
     <SEO
       title="What we do - Sorted Property Services"
+      img={OGImage}
       description="Sorted offers a wide range of services, establishing a solid reputation for high quality work in the property maintenance industry. During each stage of your project, we ensure that every stakeholder is kept up to date, removing the risk of miscommunication and delays, creating minimal disruption."
     />
     <Bread breaddata={pageContext.breadcrumb} />
