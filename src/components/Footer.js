@@ -95,7 +95,7 @@ const FooterStyles = styled.footer`
         }
         &__right {
           display: flex;
-          width: 30%;
+          width: 50px;
           height: 100%;
           justify-content: space-between;
           svg {
@@ -233,22 +233,22 @@ const Footer = () => (
       <div className="footer__social">
         <h4 className="underline-background">Contact</h4>
         <ul>
-          <Link to="/">
+          <a href="mailto:workorders@sortedpropertyservices.co.uk">
             <li>
               <span>
                 <Email />
               </span>
               workorders@sortedpropertyservices.co.uk
             </li>
-          </Link>
-          <Link to="/">
+          </a>
+          <a href="tel:02039625050">
             <li>
               <span>
                 <Phone />
               </span>
               020 3962 5050
             </li>
-          </Link>
+          </a>
           <Link to="/">
             <li>
               <span>
@@ -269,10 +269,20 @@ const Footer = () => (
           <p>&copy; Sorted Property Services {new Date().getFullYear()}</p>
         </div>
         <div className="legal__wrapper__right">
-          <Instagram />
-          <Facebook />
-          <Twitter />
-          <Linkedin />
+          <a
+            href="https://twitter.com/property_sorted"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Twitter />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/sorted-property-services/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin />
+          </a>
         </div>
       </div>
     </div>
